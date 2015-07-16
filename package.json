@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kit Chio Ng (Charlie)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Charlie-Ng/portfolio.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^0.11.2",
+    "load-grunt-tasks": "~0.1.0"
+  }
+}
