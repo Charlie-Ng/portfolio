@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Charlie Ng</title>
 </head>
-<body>
+<body ng-controller="indexCtrl">
+    {{helloWord}};
 
-<script src="/bower_components/angular/angular.js"></script>
-<script src="/bower_components/angular-aria/angular-aria.js"></script>
-<script src="/bower_components/angular-animate/angular-animate.js"></script>
-<script src="/bower_components/angular-material/angular-material.js"></script></body>
+<!-- bower components -->
+<script type="text/javascript" src="app/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="app/bower_components/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="app/bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="app/bower_components/angular-material/angular-material.js"></script></body>
+
+<!-- manually created js -->
+<script type="text/javascript" src="app/app.modules.js"></script>
+<script type="text/javascript" src="app/app.controllers.js"></script>
 </html>

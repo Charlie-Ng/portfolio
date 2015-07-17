@@ -9,18 +9,21 @@ module.exports = function(grunt){
         // task configuration goes here
         jshint : {
         	all : [
-        		'Gruntfile.js'
+        		'Gruntfile.js',
+                'app/*.js'
         	]
         }
-
-        // concat : {
-        // 	all : {
-	       //  	src : [
-	       //  		'index.html'
-	       //  	],
-	       //  	dest : 'app/dist/production.'
-        // 	}
-        // }
+        //
+        //concat : {
+        //	all : {
+	     //    	src : [
+        //            'app/app.modules.js',
+        //            'app/app.controllers.js',
+        //            'app/app.routes.js'
+	     //    	],
+	     //    	dest : 'app/production.js'
+        //	}
+        //}
     });
 
 
