@@ -18,3 +18,14 @@ body, html {
     margin: 0px;
     padding: 16px;
 }
+
+.main-header {
+    padding: 16px;
+}
+
+.main-profile {
+    height: 230px;
+    width: 230px;
+    border: solid white 2px;
+    border-radius: 250px;
+}
