@@ -23,7 +23,7 @@
     <md-content role="navigation" class="main-sidenav">
         <md-list>
             <md-list-item class="main-list-item" ng-repeat="m in menuOptions">
-                <md-button href="#" class="main-menu-button">{{::m}}</md-button>
+                <md-button href="#" class="main-menu-button" ng-click="getCurrentOption(m)">{{::m}}</md-button>
             </md-list-item>
         </md-list>
     </md-content>
@@ -34,9 +34,10 @@
     <!-- Toolbar -->
     <md-toolbar class="main-toolbar md-whiteframe-z2">
         <div class="md-toolbar-tools">
-            <md-button ng-click="toggleNav()" class="md-primary" hide-gt-sm>
+            <md-button ng-click="toggleNav()" class="md-primary" hide-gt-sm style="float: left;">
                 show
             </md-button>
+            <h2>{{currentOption}}</h2>
         </div>
     </md-toolbar>
 

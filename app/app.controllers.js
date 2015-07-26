@@ -16,12 +16,24 @@
             $scope.toggleNav = function() {
 
                 $mdSidenav('left').toggle();
-            }
+            };
 
             /*
              * menu options
              */
             $scope.menuOptions = ["Home", "Projects", "Resume", "About"];
+
+            /*
+             * display current option in toolbar
+             */
+            $scope.currentOption = "Home";
+
+            /*
+             * function changing the current option when clicked
+             */
+            $scope.getCurrentOption = function (option) {
+                $scope.currentOption = option;
+            }
     }]);
 
 }());
