@@ -2,6 +2,7 @@
 <html lang="en" ng-app="portfolio">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Charlie Ng</title>
 
     <!-- angular-material css -->
@@ -21,7 +22,7 @@
     </header>
     <md-content role="navigation" class="main-sidenav">
         <md-list>
-            <md-list-item ng-repeat="m in menuOptions">
+            <md-list-item class="main-list-item" ng-repeat="m in menuOptions">
                 <md-button href="#" class="main-menu-button">{{::m}}</md-button>
             </md-list-item>
         </md-list>
@@ -32,9 +33,11 @@
 
     <!-- Toolbar -->
     <md-toolbar class="main-toolbar md-whiteframe-z2">
-        <md-button ng-click="toggleNav()" class="md-primary" hide-gt-md>
-            show
-        </md-button>
+        <div class="md-toolbar-tools">
+            <md-button ng-click="toggleNav()" class="md-primary" hide-gt-sm>
+                show
+            </md-button>
+        </div>
     </md-toolbar>
 
     <md-content ng-view flex layout="column">

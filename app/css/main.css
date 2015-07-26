@@ -9,7 +9,7 @@ body, html {
 }
 
 .main-sidenav {
-    background-color: #2196F3;
+    background-color: #4CAF50;
 }
 
 .main-menu-button {
@@ -19,8 +19,18 @@ body, html {
     padding: 16px;
 }
 
+.main-list-item:hover {
+    background-color: #2E7D32;
+}
+
+.main-menu-button:hover {
+    color: #A5D6A7;
+}
+
 .main-header {
     padding: 16px;
+    border-bottom: 1px solid #A5D6A7;
+    text-align: center;
 }
 
 .main-profile {
