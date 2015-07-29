@@ -10,11 +10,11 @@
         .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
 
             $routeProvider
-                .when('/home', {
-                    templateUrl: '/home/home.html'
+                .when('/portfolio/Home', {
+                    templateUrl: 'components/home/home.html'
                 })
-                .when('/projects', {
-                    templateUrl: '/projects/projects.html'
+                .when('/portfolio/Projects', {
+                    templateUrl: 'components/projects/projects.html'
                 });
 
             $locationProvider.html5Mode({"enabled": true, "requireBase": false});
