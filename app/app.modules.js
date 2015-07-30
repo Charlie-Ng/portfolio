@@ -6,18 +6,29 @@
 
     'use strict';
 
-    angular.module('portfolio', ['ngMaterial', 'mainCtrl', 'ngRoute'])
-        .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
+    angular.module('portfolio', ['ngRoute', 'ngMaterial', 'mainCtrl'])
+        .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider) {
 
             $routeProvider
-                .when('/portfolio/Home', {
-                    templateUrl: 'components/home/home.html'
+                .when('/Home', {
+                    templateUrl: 'app/templates/home/home.html',
+                    controller: 'mainCtrl'
                 })
-                .when('/portfolio/Projects', {
-                    templateUrl: 'components/projects/projects.html'
+                .when('/Projects', {
+                    templateUrl: 'app/templates/projects/projects.html', // FIXME: temporarily use app/components...
+                    controller: 'mainCtrl'
+                })
+                .otherwise({
+                    redirectTo: 'Home'
                 });
+                //.when('/Resume', {
+                //    templateUrl: 'app/components/resume/resume.html'
+                //})
+                //.when('/About', {
+                //    templateUrl: 'app/components/about/about.html'
+                //})
 
-            $locationProvider.html5Mode({"enabled": true, "requireBase": false});
-
+            // FIXME: enable html5Mode when server is set up; because this requires web server
+            //$locationProvider.html5Mode({"enabled": true, "requireBase": false});
         }]);
 }());
