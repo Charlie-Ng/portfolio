@@ -28,7 +28,8 @@
     <md-content role="navigation" class="main-sidenav">
         <md-list>
             <md-list-item class="main-list-item" ng-repeat="m in menuOptions">
-                <md-button ng-href="#/{{m}}" class="main-menu-button" ng-click="getCurrentOption(m)">{{::m}}</md-button>
+                <md-button ng-class="{active: isActive(m)}" ng-href="#/{{m.name}}"
+                           class="main-menu-button" ng-click="getCurrentOption(m)">{{::m.name}}</md-button>
             </md-list-item>
         </md-list>
     </md-content>
@@ -42,9 +43,6 @@
             <md-button ng-click="toggleNav()" class="md-icon-button" hide-gt-sm>
                 <md-icon md-svg-src="app/content/icons/list_black_48px.svg" aria-label="toggle menu button"></md-icon>
             </md-button>
-            <!--<md-button ng-click="toggleNav()" class="md-primary" hide-gt-sm style="float: left;">-->
-                <!--show-->
-            <!--</md-button>-->
             <h2>{{currentOption}}</h2>
         </div>
     </md-toolbar>

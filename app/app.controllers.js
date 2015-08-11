@@ -21,7 +21,13 @@
             /*
              * menu options
              */
-            $scope.menuOptions = ["Home", "Projects", "Resume", "About"];
+            $scope.menuOptions = [
+
+                { name: "Home"},
+                { name: "Projects"},
+                { name: "Resume"},
+                { name: "About" }
+            ];
 
             /*
              * display current option in toolbar
@@ -31,9 +37,27 @@
             /*
              * function changing the current option when clicked
              */
-            $scope.getCurrentOption = function (option) {
-                $scope.currentOption = option;
-            }
+            $scope.getCurrentOption = function(option) {
+
+                $scope.currentOption = option.name;
+                $scope.selected = option;
+            };
+
+            /*
+             * function that determines which item is selected
+             */
+            $scope.select = function(option) {
+
+                $scope.selected = option;
+            };
+
+            /*
+             * function that set the current selected item
+             */
+            $scope.isActive = function(option) {
+
+                return $scope.selected === option;
+            };
     }]);
 
 }());

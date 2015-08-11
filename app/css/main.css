@@ -4,20 +4,27 @@ body, html {
     background-color: white;
 }
 
-.main-sidenav {
-    background-color: #3F51B5;
+/* sidenav */
+.main-header {
+    padding: 16px;
+    border-bottom: 1px solid #A5D6A7;
+    text-align: center;
 }
 
 .main-list-item {
     color: white;
 }
 
-.main-sidenav md-list {
-    padding: 0px;
+.main-list-item .active {
+    background-color: rgba(158,158,158,0.2);;
 }
 
-.main-list-item:active {
-    background-color: white;
+.main-sidenav {
+    background-color: #3F51B5;
+}
+
+.main-sidenav md-list {
+    padding: 0px;
 }
 
 .main-menu-button {
@@ -27,12 +34,6 @@ body, html {
     padding: 16px;
 }
 
-.main-header {
-    padding: 16px;
-    border-bottom: 1px solid #A5D6A7;
-    text-align: center;
-}
-
 .main-profile {
     height: 230px;
     width: 230px;
@@ -40,6 +41,7 @@ body, html {
     border-radius: 250px;
 }
 
+/* toolbar */
 .main-toolbar {
     background-color: #C5CAE9;
     color: black;
