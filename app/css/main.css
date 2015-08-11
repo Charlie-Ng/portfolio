@@ -8,16 +8,16 @@ body, html {
     background-color: #3F51B5;
 }
 
-.main-sidenav md-list-item {
+.main-list-item {
     color: white;
 }
 
-.main-sidenav md-list-item:hover {
-    background-color: #3D5AFE;
+.main-sidenav md-list {
+    padding: 0px;
 }
 
-.main-sidenav md-list-item a:hover {
-    color: black;
+.main-list-item:active {
+    background-color: white;
 }
 
 .main-menu-button {
@@ -25,10 +25,6 @@ body, html {
     text-align: left;
     margin: 0px;
     padding: 16px;
-}
-
-.main-menu-button:hover {
-    color: #A5D6A7;
 }
 
 .main-header {
