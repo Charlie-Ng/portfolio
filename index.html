@@ -12,23 +12,23 @@
     <link rel="stylesheet" href="app/css/main.css">
 </head>
 
-<body ng-controller="mainCtrl" layout="row" ng-cloak>
+<body ng-controller="mainCtrl" layout="row">
 
 <!-- main side menu -->
 <md-sidenav class="main-sidenav md-sidenav-left md-whiteframe-z2"
             md-component-id="left"
             md-is-locked-open="$mdMedia('gt-sm')" layout="column" tabindex="-1" flex>
 
-    <!-- profile picture -->
+     <!--profile picture-->
     <header class="main-header">
-        <img src="" alt="profile" class="main-profile">
+        <a href="#/" ng-click="resetOption()"><img src="" alt="profile" class="main-profile"></a>
     </header>
 
-    <!-- sidenav -->
-    <md-content role="navigation" class="main-sidenav">
+     <!--options-->
+    <md-content role="navigation" style="overflow: hidden;">
         <md-list>
-            <md-list-item class="main-list-item" ng-repeat="m in menuOptions">
-                <md-button ng-class="{active: isActive(m)}" ng-href="#/{{m.name}}"
+            <md-list-item class="main-list-item" ng-repeat="m in menuOptions" ng-class="{'main-option-active': isActive(m)}">
+                <md-button ng-href="#/{{m.name}}"
                            class="main-menu-button" ng-click="getCurrentOption(m)">{{::m.name}}</md-button>
             </md-list-item>
         </md-list>
@@ -39,7 +39,7 @@
 
      <!-- Toolbar -->
     <md-toolbar class="main-toolbar md-whiteframe-z2">
-        <div class="md-toolbar-tools">
+        <div class="md-toolbar-tools" ng-cloak>
             <md-button ng-click="toggleNav()" class="md-icon-button" hide-gt-sm>
                 <md-icon md-svg-src="app/content/icons/list_black_48px.svg" aria-label="toggle menu button"></md-icon>
             </md-button>

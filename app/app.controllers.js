@@ -8,7 +8,7 @@
     angular.module('mainCtrl', []);
 
     angular.module('mainCtrl').controller('mainCtrl',
-        ['$scope', '$mdSidenav', function($scope, $mdSidenav) {
+        ['$scope', '$mdSidenav','$timeout', function($scope, $mdSidenav, $timeout) {
 
             /*
              * sidenav show/hide function
@@ -26,13 +26,14 @@
                 { name: "Home"},
                 { name: "Projects"},
                 { name: "Resume"},
-                { name: "About" }
+                { name: "About"}
             ];
 
+            $scope.selected = "";
             /*
              * display current option in toolbar
              */
-            $scope.currentOption = "Home";
+            $scope.currentOption = "";
 
             /*
              * function changing the current option when clicked
@@ -44,15 +45,15 @@
             };
 
             /*
-             * function that determines which item is selected
+             * function that resets the toolbar option
              */
-            $scope.select = function(option) {
+            $scope.resetOption = function() {
 
-                $scope.selected = option;
+                $scope.currentOption = "";
             };
 
             /*
-             * function that set the current selected item
+             * function that determines which item is selected
              */
             $scope.isActive = function(option) {
 

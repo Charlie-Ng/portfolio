@@ -7,23 +7,31 @@ body, html {
 /* sidenav */
 .main-header {
     padding: 16px;
-    border-bottom: 1px solid #A5D6A7;
     text-align: center;
+    overflow: hidden;
 }
 
 .main-list-item {
     color: white;
 }
 
-.main-list-item .active {
+.main-option-active {
     background-color: rgba(158,158,158,0.2);;
 }
 
 .main-sidenav {
     background-color: #3F51B5;
+    overflow: hidden;
+    -webkit-animation: sideNavEnter 3s ease forwards;
+}
+
+@keyframes sideNavEnter {
+    from {height: 0%}
+    to {height: 100%}
 }
 
 .main-sidenav md-list {
+    background-color: #3F51B5;
     padding: 0px;
 }
 
@@ -45,4 +53,11 @@ body, html {
 .main-toolbar {
     background-color: #C5CAE9;
     color: black;
+    width: 0%;
+    -webkit-animation: toolBarEnter 3s ease 2s forwards;
+}
+
+@keyframes toolBarEnter {
+    from {width: 0%}
+    to {width: 100%}
 }
