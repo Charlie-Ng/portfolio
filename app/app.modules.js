@@ -11,7 +11,7 @@
 
             $routeProvider
                 .when('/Home', {
-                    //templateUrl: 'app/templates/home/home.html',
+                    templateUrl: 'app/templates/home/home.html',
                     controller: 'mainCtrl'
                 })
                 .when('/Projects', {
@@ -19,7 +19,7 @@
                     controller: 'mainCtrl'
                 })
                 .otherwise({
-                    templateUrl: 'app/templates/main/main.html'
+                    templateUrl: 'app/templates/home/home.html'
                 });
                 //.when('/Resume', {
                 //    templateUrl: 'app/components/resume/resume.html'

@@ -29,7 +29,10 @@
         <md-list>
             <md-list-item class="main-list-item" ng-repeat="m in menuOptions" ng-class="{'main-option-active': isActive(m)}">
                 <md-button ng-href="#/{{m.name}}"
-                           class="main-menu-button" ng-click="getCurrentOption(m)">{{::m.name}}</md-button>
+                           class="main-menu-button" ng-click="getCurrentOption(m)">
+                    <md-icon md-svg-src="app/content/icons/{{m.icon}}" aria-label="icon" style="margin-right: 32px;"></md-icon>
+                    {{::m.name}}
+                </md-button>
             </md-list-item>
         </md-list>
     </md-content>
