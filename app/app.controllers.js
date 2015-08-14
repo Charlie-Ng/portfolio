@@ -8,7 +8,7 @@
     angular.module('mainCtrl', []);
 
     angular.module('mainCtrl').controller('mainCtrl',
-        ['$scope', '$mdSidenav','$timeout', function($scope, $mdSidenav, $timeout) {
+        ['$scope', '$mdSidenav','$window', function($scope, $mdSidenav, $window) {
 
             /*
              * sidenav show/hide function
@@ -49,6 +49,7 @@
              */
             $scope.resetOption = function() {
 
+                $window.location.reload();
                 $scope.currentOption = "";
             };
 
