@@ -1,4 +1,8 @@
 /* css for index.html */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 body, html {
     height: 100%;
     background-color: #E0E0E0;
@@ -75,7 +79,7 @@ body, html {
     to {opacity: 1}
 }
 
-/* bg image */
+/* main bg image */
 .home-bgImage {
     margin: 4px auto 4px auto;
     height: 540px;

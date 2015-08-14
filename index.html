@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="app/css/main.css">
 </head>
 
-<body ng-controller="mainCtrl" layout="row">
+<body ng-controller="mainCtrl" layout="row" ng-cloak>
 
 <!-- main side menu -->
 <md-sidenav class="main-sidenav md-sidenav-left md-whiteframe-z2"
@@ -42,11 +42,11 @@
 
      <!-- Toolbar -->
     <md-toolbar class="main-toolbar md-whiteframe-z2">
-        <div class="md-toolbar-tools" ng-cloak>
+        <div class="md-toolbar-tools">
             <md-button ng-click="toggleNav()" class="md-icon-button" hide-gt-sm>
                 <md-icon md-svg-src="app/content/icons/list_black_48px.svg" aria-label="toggle menu button"></md-icon>
             </md-button>
-            <h2>{{currentOption}}</h2>
+            <h2 ng-cloak>{{currentOption}}</h2>
         </div>
     </md-toolbar>
 
