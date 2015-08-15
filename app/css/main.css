@@ -65,29 +65,3 @@ body, html {
     from {width: 0%}
     to {width: 100%}
 }
-
-/* main-view */
-.home-view {
-    margin: 16px;
-    opacity: 0;
-    overflow: hidden;
-    -webkit-animation: homeView 2s ease-in 0.5s forwards;
-}
-
-@keyframes homeView {
-    from {opacity: 0}
-    to {opacity: 1}
-}
-
-/* main bg image */
-.home-bgImage {
-    margin: 4px auto 4px auto;
-    height: 540px;
-    width: 960px;
-}
-
-.home-bgImage img{
-    display: block;
-    height: 100%;
-    width: 100%;
-}

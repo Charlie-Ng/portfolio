@@ -1,0 +1,25 @@
+/* all-view */
+.all-view {
+    margin: 16px;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-animation: mainView 2s ease-in forwards;
+}
+
+@keyframes mainView {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* main-view */
+.main-bgImage {
+    margin: 4px auto 4px auto;
+    height: 540px;
+    width: 960px;
+}
+
+.main-bgImage img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}

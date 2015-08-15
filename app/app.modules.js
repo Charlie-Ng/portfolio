@@ -10,16 +10,25 @@
         .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider) {
 
             $routeProvider
-                .when('/Home', {
-                    templateUrl: 'app/templates/home/home.html',
+                .when('/About', {
+                    templateUrl: 'app/templates/about/about.html',
                     controller: 'mainCtrl'
                 })
                 .when('/Projects', {
                     templateUrl: 'app/templates/projects/projects.html', // FIXME: temporarily use app/components...
                     controller: 'mainCtrl'
                 })
+                .when('/Resume', {
+                    templateUrl: 'app/templates/resume/resume.html'
+                })
+                .when('/Contact', {
+                    templateUrl: 'app/templates/contact/contact.html'
+                })
+                .when('/Blog', {
+                    templateUrl: 'app/templates/blog/blog.html'
+                })
                 .otherwise({
-                    templateUrl: 'app/templates/home/home.html'
+                    templateUrl: 'app/templates/main/main.html'
                 });
                 //.when('/Resume', {
                 //    templateUrl: 'app/components/resume/resume.html'
