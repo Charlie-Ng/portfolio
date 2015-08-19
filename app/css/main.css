@@ -3,9 +3,10 @@
     display: none !important;
 }
 
-body, html {
-    height: 100%;
+html, body {
+    /*height: 100%;*/
     background-color: #E0E0E0;
+    overflow: hidden;
 }
 
 /* sidenav */
@@ -64,4 +65,30 @@ body, html {
 @keyframes toolBarEnter {
     from {width: 0%}
     to {width: 100%}
+}
+
+/* all-view */
+.all-view {
+    margin: 16px;
+    opacity: 0;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-animation: mainView 2s ease-in forwards;
+}
+
+@keyframes mainView {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* main view content */
+.main-name-container {
+    background-color: #26C6DA;
+    text-align: center;
+}
+
+.main-name {
+
+
 }
