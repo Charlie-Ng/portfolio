@@ -78,17 +78,16 @@ html, body {
 }
 
 @keyframes mainView {
-    from {opacity: 0}
     to {opacity: 1}
 }
 
 /* main view content */
 .main-name-container {
     background-color: #26C6DA;
+    font-size: 48px;
+    font-weight: bold;
     text-align: center;
-}
-
-.main-name {
-
 
 }
+
+
