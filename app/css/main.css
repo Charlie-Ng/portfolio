@@ -90,12 +90,14 @@ html, body {
 }
 
 .main-name {
-    /*font-size: 24px;*/
-    /*stroke: red;*/
-    /*stroke-width: 10px;*/
-    /*fill: black;*/
-    /*x:61;*/
-    /*y:164;*/
+    fill: #000000;
+    stroke: #000000;
+    stroke-width: 0;
+    font-size: 12px;
+    font-family: serif;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    /*xml:space="preserve"*/
 }
 
 
