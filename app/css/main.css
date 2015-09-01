@@ -99,7 +99,7 @@ html, body {
     text-anchor: middle;
     alignment-baseline: middle;
     /*xml:space="preserve"*/
-    -webkit-animation: main-name-stroke-dasharray 4s linear forwards;
+    -webkit-animation: main-name-stroke-dasharray 6s linear forwards;
 }
 
 @-webkit-keyframes main-name-stroke-dasharray {
@@ -107,5 +107,3 @@ html, body {
         stroke-dasharray: 800;
     }
 }
-
-
