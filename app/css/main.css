@@ -84,39 +84,80 @@ html, body {
 /* main view content */
 .main-name-container {
     background-color: #26C6DA;
-    font-size: 48px;
-    font-weight: bold;
     text-align: center;
 }
 
 .main-name-copy {
     fill: none;
     stroke: #000000;
-    stroke-width: 0.01em;
-    stroke-dasharray: 1;
-    font-size: 36px;
+    stroke-width: 2;
+    stroke-dasharray: 1200;
+    font-size: 96px;
     font-family: serif;
     text-anchor: middle;
     alignment-baseline: middle;
-    /*xml:space="preserve"*/
-    -webkit-animation: main-name-stroke-dasharray 10s linear forwards;
+    stroke-dashoffset: 1200;
+    -webkit-animation: main-name-animation 4s linear forwards;
 }
 
-@-webkit-keyframes main-name-stroke-dasharray {
+@-webkit-keyframes main-name-animation {
     to {
-        stroke-dasharray: 1200;
+        stroke-dashoffset: 0;
     }
 }
 
 .main-title-copy {
     fill: none;
     stroke: #000000;
-    stroke-width: 0.01em;
-    stroke-dasharray: 1;
-    font-size: 12px;
+    stroke-width: 0.6;
+    stroke-dasharray: 1200;
+    font-size: 32px;
     font-family: serif;
     text-anchor: middle;
     alignment-baseline: middle;
-    /*xml:space="preserve"*/
-    /*-webkit-animation: main-name-stroke-dasharray 6s linear forwards;*/
+    stroke-dashoffset: 1200;
+    opacity: 0;
+    -webkit-animation: main-title-animation 4s linear forwards;
+}
+
+@-webkit-keyframes main-title-animation {
+    20% {
+        stroke-dashoffset: 0;
+        opacity: 0.2;
+    }
+    40% {
+        stroke-dashoffset: 1200;
+        opacity: 0.4;
+    }
+    60% {
+        stroke-dashoffset: 0;
+        opacity: 0.6;
+    }
+    80% {
+        stroke-dashoffset: 1200;
+        opacity: 0.8;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+.main-degree-copy {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 0.6;
+    stroke-dasharray: 1200;
+    font-size: 32px;
+    font-family: serif;
+    text-anchor: middle;
+    alignment-baseline: middle;
+    opacity: 0;
+    -webkit-animation: main-degree-animation 4s linear 2s forwards;
+}
+
+@-webkit-keyframes main-degree-animation {
+    to {
+        opacity: 1;
+    }
 }
