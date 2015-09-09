@@ -6,11 +6,11 @@
     <title>Charlie Ng</title>
 
     <!-- angular-material css -->
-    <link rel="stylesheet" href="app/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
 
     <!-- manually created css file -->
-    <link rel="stylesheet" href="app/css/main.css">
-    <link rel="stylesheet" href="app/css/views.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/views.css">
 </head>
 
 <body ng-controller="mainCtrl" layout="row" ng-cloak>
@@ -31,7 +31,7 @@
             <md-list-item class="main-list-item" ng-repeat="m in menuOptions" ng-class="{'main-option-active': isActive(m)}">
                 <md-button ng-href="#/{{m.name}}"
                            class="main-menu-button" ng-click="getCurrentOption(m)">
-                    <md-icon md-svg-src="app/content/icons/{{m.icon}}" aria-label="icon" style="margin-right: 32px;"></md-icon>
+                    <md-icon md-svg-src="content/icons/{{m.icon}}" aria-label="icon" style="margin-right: 32px;"></md-icon>
                     {{::m.name}}
                 </md-button>
             </md-list-item>
@@ -57,15 +57,15 @@
 </div>
 
 <!-- bower components -->
-<script type="text/javascript" src="app/bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="app/bower_components/angular-aria/angular-aria.js"></script>
-<script type="text/javascript" src="app/bower_components/angular-animate/angular-animate.js"></script>
-<script type="text/javascript" src="app/bower_components/angular-material/angular-material.js"></script>
-<script type="text/javascript" src="app/bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 
 <!-- manually created js file-->
-<script type="text/javascript" src="app/app.modules.js"></script>
-<script type="text/javascript" src="app/app.controllers.js"></script>
+<script type="text/javascript" src="app.modules.js"></script>
+<script type="text/javascript" src="app.controllers.js"></script>
 
 </body>
 </html>

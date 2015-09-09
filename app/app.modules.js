@@ -11,24 +11,24 @@
 
             $routeProvider
                 .when('/About', {
-                    templateUrl: 'app/templates/about/about.html',
+                    templateUrl: 'templates/about/about.html',
                     controller: 'mainCtrl'
                 })
                 .when('/Projects', {
-                    templateUrl: 'app/templates/projects/projects.html', // FIXME: temporarily use app/components...
+                    templateUrl: 'templates/projects/projects.html', // FIXME: temporarily use app/components...
                     controller: 'mainCtrl'
                 })
                 .when('/Resume', {
-                    templateUrl: 'app/templates/resume/resume.html'
+                    templateUrl: 'templates/resume/resume.html'
                 })
                 .when('/Contact', {
-                    templateUrl: 'app/templates/contact/contact.html'
+                    templateUrl: 'templates/contact/contact.html'
                 })
                 .when('/Blog', {
-                    templateUrl: 'app/templates/blog/blog.html'
+                    templateUrl: 'templates/blog/blog.html'
                 })
                 .otherwise({
-                    templateUrl: 'app/templates/main/main.html'
+                    templateUrl: 'templates/main/main.html'
                 });
                 //.when('/Resume', {
                 //    templateUrl: 'app/components/resume/resume.html'
