@@ -1,5 +1,6 @@
 .about-view {
-    padding: 16px;
+    padding: 24px;
+    font-size: 18px;
 }
 
 .about-hello-wrapper {
@@ -14,6 +15,7 @@
 }
 
 .about-hello-wrapper ul {
+    padding-left: 48px;
     position: relative;
     list-style: none;
     margin: 0px;
@@ -59,3 +61,28 @@
         margin-top: 0;
     }
 }
+
+.about-paragraph > p:nth-child(1) {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    -webkit-animation: about-typing 4s steps(60, end);
+}
+
+@-webkit-keyframes about-typing {
+    from {
+        width: 0;
+    }
+}
+
+.about-paragraph > p:nth-child(1) > span {
+    -webkit-animation: about-typing-bar 1s infinite;
+}
+
+@-webkit-keyframes about-typing-bar {
+    to {
+        opacity: 0;
+    }
+}
+
+
