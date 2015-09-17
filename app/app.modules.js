@@ -6,7 +6,7 @@
 
     'use strict';
 
-    angular.module('portfolio', ['ngRoute', 'ngMaterial', 'mainCtrl'])
+    angular.module('portfolio', ['ngRoute', 'ngMaterial', 'mainCtrl', ''])
         .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider) {
 
             $routeProvider
