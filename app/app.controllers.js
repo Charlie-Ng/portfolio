@@ -5,10 +5,10 @@
 
     'use strict';
 
-    angular.module('mainCtrl', []);
+    angular.module('appControllers', []);
 
-    angular.module('mainCtrl').controller('mainCtrl',
-        ['$scope', '$mdSidenav','$window', function($scope, $mdSidenav, $window) {
+    angular.module('appControllers').controller('mainCtrl',
+        ['$scope', '$mdSidenav','$window', 'mainService', function($scope, $mdSidenav, $window, mainService) {
 
             /*
              * sidenav show/hide function
@@ -61,6 +61,31 @@
 
                 return $scope.selected === option;
             };
+
+            /*
+             *
+             */
+
+            $scope.getBingBackgrounds = function() {
+
+                mainService.getBingBackgrounds(function(err, data) {
+
+                    if(err) {
+
+                        console.error("ERROR: getting main background image");
+                    }
+                    else if(data) {
+
+                        console.log(data);
+                    }
+                    else {
+
+                        console.error("ERROR: unknown error: getting main background image ");
+                    }
+                });
+            };
+
+            $scope.getBingBackgrounds();
     }]);
 
 }());

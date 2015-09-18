@@ -6,27 +6,31 @@
 
     'use strict';
 
-    angular.module('portfolio').factory(
-        'mainService', ['$http', function($http) {
+    angular.module('appServices').factory('mainService',
+        ['$http',
+            function($http) {
 
-            var MainService = {};
+                var MainService = {};
 
-            MainService.getBingBackgrounds = function() {
+                MainService.getBingBackgrounds = function(callback) {
 
-                $http(
-                    {
-                        "method": 'GET',
-                        "url": "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
-                    })
-                    .success(function(data, status, header, config) {
+                    $http(
+                        {
+                            "method": 'GET',
+                            "url": "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
+                        })
+                        .success(function(data, status, header, config) {
 
-                        callback(false, data);
-                    })
-                    .error(function(data, status, header, config) {
+                            callback(false, data);
+                        })
+                        .error(function(data, status, header, config) {
 
-                        callback(true, null);
-                    })
+                            callback(true, null);
+                        });
+                };
+
+                return MainService;
             }
-        }]
+        ]
     );
-});
+}());

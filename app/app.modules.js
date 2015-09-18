@@ -6,8 +6,8 @@
 
     'use strict';
 
-    angular.module('portfolio', ['ngRoute', 'ngMaterial', 'mainCtrl', ''])
-        .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider) {
+    angular.module('portfolio', ['ngRoute', 'ngMaterial', 'appControllers', 'appServices'])
+        .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
 
             $routeProvider
                 .when('/About', {
@@ -40,4 +40,7 @@
             // FIXME: enable html5Mode when server is set up; because this requires web server
             //$locationProvider.html5Mode({"enabled": true, "requireBase": false});
         }]);
+
+    angular.module('appServices', []);
+
 }());
