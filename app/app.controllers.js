@@ -43,11 +43,6 @@
 
                 $scope.currentOption = option.name;
                 $scope.selected = option;
-
-                if(option == "About") {
-
-                    $scope.getPixabayBackgrounds();
-                }
             };
 
             /*
@@ -68,14 +63,13 @@
             };
 
             /*
-             *
+             * string url that stores the background image
              */
+            $scope.backGrounds = "";
 
-            $scope.backGrounds = [];
+            (function getBackgrounds() {
 
-            $scope.getPixabayBackgrounds = function() {
-
-                mainService.getPixabayBackgrounds(function(err, data) {
+                mainService.getBackgrounds(function(err, data) {
 
                     if(err) {
 
@@ -83,17 +77,26 @@
                     }
                     else if(data) {
 
-                        $scope.backGrounds = data.hits[0].webformatURL;
-                        //console.log("sdfsdfsdf");
+                        if(data.photos.photo.length === 0) {
+
+                            console.warn("WARNING: no photo received");
+                            $scope.backGrounds = "some default image";
+                        }
+                        else {
+
+                            var photosRef = data.photos.photo;
+                            var index = Math.floor((Math.random() * photosRef.length) + 0);
+                            var photoRef = photosRef[index];
+
+                            $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.secret + ".jpg";
+                        }
                     }
                     else {
 
                         console.error("ERROR: unknown error: getting main background image ");
                     }
                 });
-            };
-
-            //$scope.getPixabayBackgrounds();
+            })();//end of self-invoked function getBackgrounds
     }]);
 
 }());

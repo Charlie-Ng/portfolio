@@ -12,19 +12,24 @@
 
                 var MainService = {};
 
-                MainService.getPixabayBackgrounds = function(callback) {
+                /*
+                 * function that gets image JSON from flickr
+                 */
+                MainService.getBackgrounds = function(callback) {
 
                     $http(
                         {
 
                             "method": "get",
-                            "url": "https://pixabay.com/api/?username=charlieng&key=568e1025e247d16bc275&q=landscapes&image_type=photo"
+                            "url": "https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json"
                         })
                     //$http.jsonp("https://pixabay.com/api/?username=charlieng&key=568e1025e247d16bc275&q=landscapes&image_type=photo&callback=JSON_CALLBACK")
                         .success(function(data, status, header, config) {
 
-                            //console.log(data);
-                            callback(false, data);
+                            var actualJSON = receivedJSON.split('(');
+                            actualJSON = actualJSON[1].split(')');
+
+                            callback(false, actualJSON);
                         })
                         .error(function(data, status, header, config) {
 
@@ -33,7 +38,7 @@
                 };
 
                 return MainService;
-            }
+            }// end of wrapper function
         ]
     );
 }());

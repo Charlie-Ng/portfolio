@@ -27,8 +27,12 @@
                 .when('/Blog', {
                     templateUrl: 'templates/blog/blog.html'
                 })
+                .when('/', {
+                    templateUrl: 'templates/main/main.html'
+                })
                 .otherwise({
                     templateUrl: 'templates/main/main.html'
+                    //redirectTo: '/'
                 });
                 //.when('/Resume', {
                 //    templateUrl: 'app/components/resume/resume.html'
