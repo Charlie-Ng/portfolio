@@ -26,10 +26,10 @@
                     //$http.jsonp("https://pixabay.com/api/?username=charlieng&key=568e1025e247d16bc275&q=landscapes&image_type=photo&callback=JSON_CALLBACK")
                         .success(function(data, status, header, config) {
 
-                            var actualJSON = receivedJSON.split('(');
+                            var actualJSON = data.split('(');
                             actualJSON = actualJSON[1].split(')');
 
-                            callback(false, actualJSON);
+                            callback(false, JSON.parse(actualJSON[0]));
                         })
                         .error(function(data, status, header, config) {
 
@@ -38,7 +38,7 @@
                 };
 
                 return MainService;
-            }// end of wrapper function
+            }
         ]
     );
 }());

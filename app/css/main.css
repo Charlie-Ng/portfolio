@@ -82,25 +82,22 @@ html, body {
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
+    background-color: #000000;
+    background-size: cover;
 }
 
 /* main view content */
-.main-name-container {
-    background-color: #26C6DA;
-    text-align: center;
-}
-
 .main-name-copy {
     fill: none;
-    stroke: #000000;
+    stroke: #ffffff;
     stroke-width: 2;
-    stroke-dasharray: 1200;
+    stroke-dasharray: 1400;
     font-size: 96px;
     font-family: serif;
     text-anchor: middle;
     alignment-baseline: middle;
-    stroke-dashoffset: 1200;
-    -webkit-animation: main-name-animation 4s linear forwards;
+    stroke-dashoffset: 1400;
+    -webkit-animation: main-name-animation 4s linear forwards, main-name-fill 8s linear forwards;
 }
 
 @-webkit-keyframes main-name-animation {
@@ -109,10 +106,16 @@ html, body {
     }
 }
 
+@-webkit-keyframes main-name-fill {
+    to {
+        fill: #bdbdbd;
+    }
+ }
+
 .main-title-copy {
     fill: none;
-    stroke: #000000;
-    stroke-width: 0.6;
+    stroke: #ffffff;
+    stroke-width: 0.8;
     stroke-dasharray: 1200;
     font-size: 32px;
     font-family: serif;
@@ -142,14 +145,15 @@ html, body {
     }
     100% {
         stroke-dashoffset: 0;
+        fill: #ffffff;
         opacity: 1;
     }
 }
 
 .main-degree-copy {
     fill: none;
-    stroke: #000000;
-    stroke-width: 0.6;
+    stroke: #ffffff;
+    stroke-width: 0.8;
     stroke-dasharray: 1200;
     font-size: 32px;
     font-family: serif;
@@ -162,5 +166,6 @@ html, body {
 @-webkit-keyframes main-degree-animation {
     to {
         opacity: 1;
+        fill: #ffffff;
     }
 }

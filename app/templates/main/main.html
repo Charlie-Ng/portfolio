@@ -1,22 +1,19 @@
-<md-card class="all-view main-view" flex>
-    <!--<div ng-repeat="b in backGrounds">{{b}}</div>-->
+<md-card class="all-view main-view" flex ng-style="{'background-image': 'url(' + backGrounds + ')'}">
+    <svg viewBox="0 0 600 480">
+        <symbol id="main-name">
+            <text x="300" y="200">Charlie Ng</text>
+        </symbol>
 
-    <img ng-src="{{backGrounds}}">
-    <!--<svg viewBox="0 0 600 480">-->
-        <!--<symbol id="main-name">-->
-            <!--<text x="300" y="200">Charlie Ng</text>-->
-        <!--</symbol>-->
+        <symbol id="main-title">
+            <text x="300" y="250">Web・Application・Developer</text>
+        </symbol>
 
-        <!--<symbol id="main-title">-->
-            <!--<text x="300" y="250">Web・Application・Developer</text>-->
-        <!--</symbol>-->
+        <symbol id="main-degree">
+            <text x="300" y="300">B.S. Computer Science, UC Davis</text>
+        </symbol>
 
-        <!--<symbol id="main-degree">-->
-            <!--<text x="300" y="300">B.S. Computer Science, UC Davis</text>-->
-        <!--</symbol>-->
-
-        <!--<use xlink:href="#main-name" class="main-name-copy"></use>-->
-        <!--<use xlink:href="#main-title" class="main-title-copy"></use>-->
-        <!--<use xlink:href="#main-degree" class="main-degree-copy"></use>-->
-    <!--</svg>-->
+        <use xlink:href="#main-name" class="main-name-copy"></use>
+        <use xlink:href="#main-title" class="main-title-copy"></use>
+        <use xlink:href="#main-degree" class="main-degree-copy"></use>
+    </svg>
 </md-card>
