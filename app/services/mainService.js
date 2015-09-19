@@ -12,15 +12,18 @@
 
                 var MainService = {};
 
-                MainService.getBingBackgrounds = function(callback) {
+                MainService.getPixabayBackgrounds = function(callback) {
 
                     $http(
                         {
-                            "method": 'GET',
-                            "url": "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
+
+                            "method": "get",
+                            "url": "https://pixabay.com/api/?username=charlieng&key=568e1025e247d16bc275&q=landscapes&image_type=photo"
                         })
+                    //$http.jsonp("https://pixabay.com/api/?username=charlieng&key=568e1025e247d16bc275&q=landscapes&image_type=photo&callback=JSON_CALLBACK")
                         .success(function(data, status, header, config) {
 
+                            //console.log(data);
                             callback(false, data);
                         })
                         .error(function(data, status, header, config) {

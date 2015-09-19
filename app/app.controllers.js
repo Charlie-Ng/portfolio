@@ -43,6 +43,11 @@
 
                 $scope.currentOption = option.name;
                 $scope.selected = option;
+
+                if(option == "About") {
+
+                    $scope.getPixabayBackgrounds();
+                }
             };
 
             /*
@@ -66,9 +71,11 @@
              *
              */
 
-            $scope.getBingBackgrounds = function() {
+            $scope.backGrounds = [];
 
-                mainService.getBingBackgrounds(function(err, data) {
+            $scope.getPixabayBackgrounds = function() {
+
+                mainService.getPixabayBackgrounds(function(err, data) {
 
                     if(err) {
 
@@ -76,7 +83,8 @@
                     }
                     else if(data) {
 
-                        console.log(data);
+                        $scope.backGrounds = data.hits[0].webformatURL;
+                        //console.log("sdfsdfsdf");
                     }
                     else {
 
@@ -85,7 +93,7 @@
                 });
             };
 
-            $scope.getBingBackgrounds();
+            //$scope.getPixabayBackgrounds();
     }]);
 
 }());
