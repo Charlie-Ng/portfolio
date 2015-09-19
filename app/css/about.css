@@ -85,12 +85,12 @@
 }
 
  /* 3 p */
-.about-paragraph > p:nth-child(3) {
+.about-paragraph > p:nth-child(2) {
     white-space: nowrap;
-    width: 23.5ch;
+    width: 9ch;
     overflow: hidden;
     border-right: 2px solid black;
-    -webkit-animation: about-typing-3 4s steps(60, start) forwards,
+    -webkit-animation: about-typing-3 4s 9s steps(60, start) forwards,
     about-typing-bar-3 1s linear infinite, about-typing-bar-opacity-3 1s 5s forwards;
 }
 
@@ -111,4 +111,12 @@
         border-right: none;
     }
  }
+
+.about-my-image {
+    float: right;
+}
+
+.about-my-image img{
+    width: 240px;
+}
 
