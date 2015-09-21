@@ -80,8 +80,8 @@ html, body {
 
 .main-view {
     overflow: hidden;
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
+    flex-direction: column;
+    justify-content: center;
     background-color: #000000;
     background-repeat: no-repeat;
     background-position: center;
@@ -110,7 +110,8 @@ html, body {
 
 @-webkit-keyframes main-name-fill {
     to {
-        fill: #bdbdbd;
+        fill: #ffffff;
+        stroke-width: 0;
     }
  }
 
