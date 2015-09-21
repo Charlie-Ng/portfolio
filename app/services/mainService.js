@@ -21,10 +21,12 @@
                         {
 
                             "method": "get",
-                            "url": "https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json"
+                            "url": "https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&extras=original_format&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json"
                         })
-                    //$http.jsonp("https://pixabay.com/api/?username=charlieng&key=568e1025e247d16bc275&q=landscapes&image_type=photo&callback=JSON_CALLBACK")
+                    //$http.jsonp("https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json")
                         .success(function(data, status, header, config) {
+
+                            console.log(data);
 
                             var actualJSON = data.split('(');
                             actualJSON = actualJSON[1].split(')');

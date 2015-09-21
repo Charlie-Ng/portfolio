@@ -88,7 +88,7 @@
                             var index = Math.floor((Math.random() * photosRef.length) + 0);
                             var photoRef = photosRef[index];
 
-                            $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.secret + ".jpg";
+                            $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
                             console.log($scope.backGrounds);
                         }
                     }

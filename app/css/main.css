@@ -80,10 +80,12 @@ html, body {
 
 .main-view {
     overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
     background-color: #000000;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 
 /* main view content */
