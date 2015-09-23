@@ -98,6 +98,7 @@
                     }
                 });
             })();//end of self-invoked function getBackgrounds
+
     }]);
 
 }());

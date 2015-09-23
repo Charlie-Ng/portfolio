@@ -93,12 +93,12 @@ html, body {
     fill: none;
     stroke: #ffffff;
     stroke-width: 2;
-    stroke-dasharray: 1400;
+    stroke-dasharray: 1600;
     font-size: 96px;
     font-family: serif;
     text-anchor: middle;
     alignment-baseline: middle;
-    stroke-dashoffset: 1400;
+    stroke-dashoffset: 1600;
     -webkit-animation: main-name-animation 4s linear forwards, main-name-fill 8s linear forwards;
 }
 

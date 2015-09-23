@@ -26,7 +26,6 @@
                     //$http.jsonp("https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json")
                         .success(function(data, status, header, config) {
                             //FIXME: data should be a function returned, and check status
-                            console.log(data);
 
                             var actualJSON = data.split('(');
                             actualJSON = actualJSON[1].split(')');
