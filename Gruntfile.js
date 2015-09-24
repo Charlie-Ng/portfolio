@@ -11,7 +11,8 @@ module.exports = function(grunt){
         	all : [
         		'Gruntfile.js',
                 'app/*.js',
-                'app/services/*.js'
+                'app/services/*.js',
+                'app/templates/resume/*.js'
         	]
         }
         //

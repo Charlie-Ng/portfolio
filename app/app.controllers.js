@@ -7,7 +7,7 @@
 
     angular.module('appControllers', []);
 
-    angular.module('appControllers').controller('mainCtrl',
+    angular.module('appControllers').controller('appCtrl',
         ['$scope', '$mdSidenav','$window', 'mainService', function($scope, $mdSidenav, $window, mainService) {
 
             /*
@@ -98,7 +98,6 @@
                     }
                 });
             })();//end of self-invoked function getBackgrounds
-
     }]);
 
 }());

@@ -11,14 +11,14 @@
 
             $routeProvider
                 .when('/About', {
-                    templateUrl: 'templates/about/about.html',
-                    controller: 'mainCtrl'
+                    templateUrl: 'templates/about/about.html'
                 })
                 .when('/Projects', {
                     templateUrl: 'templates/projects/projects.html', // FIXME: temporarily use app/components...
-                    controller: 'mainCtrl'
+                    controller: 'appCtrl'
                 })
                 .when('/Resume', {
+                    controller: 'resumeCtrl',
                     templateUrl: 'templates/resume/resume.html'
                 })
                 .when('/Contact', {

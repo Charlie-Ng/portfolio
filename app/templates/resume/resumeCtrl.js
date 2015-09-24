@@ -6,7 +6,7 @@
 
     'use strict';
 
-    angular.module('appController').controller('resumeCtrl',
+    angular.module('appControllers').controller('resumeCtrl',
         ['$scope', function($scope) {
 
             /*
@@ -17,7 +17,8 @@
                 basics : {
 
                     firstName: "Kit Chio",
-                    lastNmae: "Ng",
+                    lastName: "Ng",
+                    fullName: "Ng, Kit Chio",
                     nickName: "Charlie",
                     phone: "408-221-2865",
                     email: "kcng@ucdavis.edu"
@@ -30,7 +31,7 @@
                     university: "University of California, Davis",
                     major: "Computer Science, BS",
                     minor: "none",
-                    GPA: "3.41"
+                    GPA: "3.41/4.0",
                     graduateDate: "June 2016"
                 },
                 
@@ -58,6 +59,7 @@
                 links: {
                     
                 }
-            }
+            };
+
         }]);
-})();
+}());

@@ -1,13 +1,73 @@
 <md-content class="all-view resume-view md-whiteframe-z2" flex>
-    <md-tabs md-border-bttom md-stretch-tabs="always">
+    <md-tabs md-border-bttom md-dynamic-height="true" md-stretch-tabs="always">
         <!-- Basic tab -->
         <md-tab label="Basics">
-            <md-content layout-padding>
+            <md-content layout-padding flex>
                 <div layout="row" layout-sm="column">
-                    <md-input-container>
-                        <label>First Name</label>
-                        <input>
+
+                    <!-- Last, First Name -->
+                    <md-input-container flex>
+                        <label>Last, First Name</label>
+                        <input ng-readonly="true" ng-model="myResume.basics.fullName">
                     </md-input-container>
+
+                    <!-- Nick Name -->
+                    <md-input-container flex>
+                        <label>Nick Name</label>
+                        <input ng-readonly="true" ng-model="myResume.basics.nickName">
+                    </md-input-container>
+                </div>
+
+                <div layout="row" layout-sm="column">
+
+                    <!-- Email -->
+                    <md-input-container flex>
+                        <label>Email</label>
+                        <input ng-readonly="true" ng-model="myResume.basics.email">
+                    </md-input-container>
+
+                    <!-- Phone -->
+                    <md-input-container flex>
+                        <label>Phone</label>
+                        <input ng-readonly="true" ng-model="myResume.basics.phone">
+                    </md-input-container>
+                </div>
+
+                <!-- Objective -->
+                <md-input-container>
+                    <label>Objective</label>
+                    <input ng-readonly="true" ng-model="myResume.objective">
+                </md-input-container>
+
+                <div layout="row" layout-md="column" layout-sm="column">
+
+                    <div layout="row" layout-md="row" layout-sm="column" flex>
+                        <!-- University -->
+                        <md-input-container flex>
+                            <label>Education</label>
+                            <input ng-readonly="true" ng-model="myResume.education.university">
+                        </md-input-container>
+
+                        <!-- Major -->
+                        <md-input-container flex>
+                            <label>Major</label>
+                            <input ng-readonly="true" ng-model="myResume.education.major">
+                        </md-input-container>
+                    </div>
+
+                    <div layout="row" layout-md="row" layout-sm="column" flex>
+                        <!-- GPA -->
+                        <md-input-container flex>
+                            <label>GPA</label>
+                            <input ng-readonly="true" ng-model="myResume.education.GPA">
+                        </md-input-container>
+
+                        <!-- Expected Graduate Date -->
+                        <md-input-container flex>
+                            <label>Expected graduate date</label>
+                            <input ng-readonly="true" ng-model="myResume.education.graduateDate">
+                        </md-input-container>
+                    </div>
                 </div>
             </md-content>
         </md-tab>
@@ -20,8 +80,8 @@
         </md-tab>
     </md-tabs>
 
-    <md-toolbar>
-        <md-divider></md-divider>
-        somethingssssssssssssssssss
-    </md-toolbar>
+    <!--<md-toolbar>-->
+        <!--<md-divider></md-divider>-->
+        <!--somethingssssssssssssssssss-->
+    <!--</md-toolbar>-->
 </md-content>
