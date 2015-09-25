@@ -6,6 +6,10 @@
     bottom: 0;
 }
 
-.resume-view md-content {
+.resume-view .resume-slider-container {
+    padding: 0;
+}
 
+.resume-slider-container md-slider {
+    padding: 0 16px 0 16px;
 }
