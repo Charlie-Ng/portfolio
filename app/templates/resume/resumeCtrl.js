@@ -68,7 +68,7 @@
                     html5css3: {
 
                         name: "HTML5/CSS3",
-                        rate: 10
+                        rate: 9
                     },
 
                     angularjs: {
