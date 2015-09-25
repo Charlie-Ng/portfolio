@@ -34,7 +34,9 @@
                     shortMajor: "CS, BS",
                     minor: "none",
                     GPA: "3.41/4.0",
-                    graduateDate: "June 2016"
+                    graduateDate: "June 2016",
+                    courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming",
+                        "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Abstract Mathematics", "Combinatorics"]
                 },
                 
                 skills: {

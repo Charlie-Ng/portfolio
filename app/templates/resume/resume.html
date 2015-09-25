@@ -45,23 +45,23 @@
 
                     <div layout="row" layout-md="row" layout-sm="column" flex>
                         <!-- University -->
-                        <md-input-container show-gt-md hide-md hide-sm flex>
+                        <md-input-container show-gt-md hide-md show-sm flex>
                             <label>Education</label>
                             <input ng-readonly="true" ng-model="myResume.education.university">
                         </md-input-container>
 
-                        <md-input-container hide-gt-md show-md show-sm flex>
+                        <md-input-container hide-gt-md show-md hide-sm flex>
                             <label>Education</label>
                             <input ng-readonly="true" ng-model="myResume.education.shortUName">
                         </md-input-container>
 
                         <!-- Major -->
-                        <md-input-container show-gt-md hide-md hide-sm flex>
+                        <md-input-container show-gt-md hide-md show-sm flex>
                             <label>Major</label>
                             <input ng-readonly="true" ng-model="myResume.education.major">
                         </md-input-container>
 
-                        <md-input-container hide-gt-md show-md show-sm flex>
+                        <md-input-container hide-gt-md show-md hide-sm flex>
                             <label>Major</label>
                             <input ng-readonly="true" ng-model="myResume.education.shortMajor">
                         </md-input-container>
@@ -81,6 +81,12 @@
                         </md-input-container>
                     </div>
                 </div>
+
+                <!-- courses -->
+                <md-input-container class="resume-courses md-input-has-value">
+                    <label>Related Courses</label>
+                    <md-chips ng-model="myResume.education.courses" readonly="true"></md-chips>
+                </md-input-container>
 
                  <!--Programming languages-->
                 <div layout="row" layout-md="column" layout-sm="column" flex class="resume-slider-container">
@@ -127,14 +133,14 @@
 
                     <div flex layout="row" layout-align="start center">
                         <div class="md-body-1 resume-slider-text"><span>{{::myResume.skills.git.name}}</span></div>
-                        <md-slider flex md-discrete ng-model="::myResume.skills.git.rate" min="0" max="10" step="1" aria-label="red" aria-label="rating"></md-slider>
+                        <md-slider ng-disabled="true" flex md-discrete ng-model="::myResume.skills.git.rate" min="0" max="10" step="1" aria-label="red" aria-label="rating"></md-slider>
                     </div>
                 </div>
             </md-content>
         </md-tab>
 
         <!-- more tab -->
-        <md-tab label="more">
+        <md-tab label="Experiences">
             <md-content layout-padding>
                 content 2
             </md-content>

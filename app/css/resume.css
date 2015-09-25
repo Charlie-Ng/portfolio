@@ -17,6 +17,19 @@
     text-align: center;
 }
 
+.resume-view .resume-courses {
+    padding-bottom: 2px;
+}
+
+.resume-view .resume-courses > label {
+    position: absolute;
+    top: -16px;
+}
+
+.resume-view .resume-courses md-chip {
+    padding-right: 12px !important;
+}
+
 .resume-view .resume-slider-container md-slider[disabled]:not(.md-min) .md-thumb:after {
     background-color: rgb(255,64,129);
 }
