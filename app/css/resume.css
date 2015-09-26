@@ -46,3 +46,11 @@
     -webkit-transform: scale(0.50);
     transform: scale(0.50);
 }
+
+.resume-experiences > div[layout="column"]:nth-child(odd) {
+    background-color: #E8EAF6;
+}
+
+.resume-footer {
+    overflow: hidden;
+}

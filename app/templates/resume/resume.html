@@ -139,16 +139,85 @@
             </md-content>
         </md-tab>
 
-        <!-- more tab -->
+        <!-- exp&more tab -->
         <md-tab label="Experiences">
-            <md-content layout-padding>
-                content 2
+            <md-content layout-padding class="resume-experiences">
+
+                <div layout="column">
+                    <div layout="row" layout-md="column" layout-sm="column">
+                        <!-- application developer -->
+                        <md-input-container flex>
+                            <label>Title</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job1.title">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Where</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job1.company">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Period</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job1.period">
+                        </md-input-container>
+                    </div>
+
+                    <md-input-container flex>
+                        <label>Duties</label>
+                        <textarea ng-model="myResume.experiences.job1.duties.duty1"></textarea>
+                    </md-input-container>
+                </div>
+
+                <div layout="column">
+                    <div layout="row" layout-md="column" layout-sm="column">
+                        <!-- Web developer -->
+                        <md-input-container flex>
+                            <label>Title</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job2.title">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Where</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job2.company">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Period</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job2.period">
+                        </md-input-container>
+                    </div>
+
+                    <md-input-container flex>
+                        <label>Duties</label>
+                        <textarea ng-model="myResume.experiences.job2.duties.duty1"></textarea>
+                    </md-input-container>
+                </div>
+
+                <div layout="column">
+                    <div layout="row" layout-md="column" layout-sm="column">
+                        <!-- Math Tutor -->
+                        <md-input-container flex>
+                            <label>Title</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job3.title">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Where</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job3.company">
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Period</label>
+                            <input ng-readonly="true" ng-model="myResume.experiences.job3.period">
+                        </md-input-container>
+                    </div>
+
+                    <md-input-container flex>
+                        <label>Duties</label>
+                        <textarea ng-model="myResume.experiences.job3.duties.duty1"></textarea>
+                    </md-input-container>
+                </div>
             </md-content>
         </md-tab>
+
     </md-tabs>
     </md-content>
     <md-divider></md-divider>
-    <md-content layout="row" layout-align="end center">
+    <md-content hide-sm layout="row" layout-align="end center" class="resume-footer">
         <md-button><md-icon md-svg-src="content/icons/ic_get_app_black_48px.svg"></md-icon>PDF</md-button>
     </md-content>
 </md-content>

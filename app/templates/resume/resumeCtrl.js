@@ -99,10 +99,10 @@
                         title: "Applications Developer",
                         company: "UC Davis",
                         period: "June 2015 - present",
+                        oneLine: "Application Developer, UC Davis, June 2015 - present",
                         duties: {
 
-                            duty1: "Designed and implemented UC Davis Aggiefeed, a Twitter like web application streaming campus news, event, and activities",
-                            duty2: "something"
+                            duty1: "Designed and implemented UC Davis Aggiefeed, a Twitter-like web application streaming campus news, event, and activities."
                         }
                     },
 
@@ -113,7 +113,7 @@
                         period: "March 2015 - June 2015 (3 months)",
                         duties : {
 
-                            duty1: "Redesigned and implemented UC Davis Physical department website"
+                            duty1: "Redesigned and implemented UC Davis Physical department website."
                         }
                     },
 
@@ -124,7 +124,7 @@
                         period: "Sep 2013 - June 2014 (9 months)",
                         duties : {
 
-                            dutye1: "xxxxxxxxxx xxx xxxxxxxxxxxxx xxx  xxx"
+                            duty1: "xxxxxxxxxx xxx xxxxxxxxxxxxx xxx  xxx"
                         }
                     }
                 },
