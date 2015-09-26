@@ -83,7 +83,7 @@
                 </div>
 
                 <!-- courses -->
-                <md-input-container class="resume-courses md-input-has-value">
+                <md-input-container class="resume-courses md-input-has-value" ng-init="sortCourses()">
                     <label>Related Courses</label>
                     <md-chips ng-model="myResume.education.courses" readonly="true"></md-chips>
                 </md-input-container>

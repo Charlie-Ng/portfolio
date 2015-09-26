@@ -146,5 +146,13 @@
                 }
             };
 
+            $scope.sortCourses =function() {
+
+                $scope.myResume.education.courses.sort(function(a, b) {
+
+                    return b.length - a.length;
+                });
+            }
+
         }]);
 }());

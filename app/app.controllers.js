@@ -102,13 +102,14 @@
                             console.warn("WARNING: no photo received");
                             $scope.backGrounds = "some default image";
                         }
-                        else {
+                        else if(data.stat === "ok") {
 
                             var photosRef = data.photos.photo;
                             var index = Math.floor((Math.random() * photosRef.length) + 0);
                             var photoRef = photosRef[index];
 
                             $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
+                            console.log($scope.backGrounds);
                         }
                     }
                     else {

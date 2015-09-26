@@ -26,7 +26,14 @@ html, body {
 .main-sidenav {
     background-color: #3F51B5;
     overflow: hidden;
-    -webkit-animation: sideNavEnter 2s ease-in forwards;
+    -webkit-animation: sideNavEnter 1s ease-in forwards;
+}
+
+@media screen and (max-width: 600px) {
+
+    .main-profile {
+        width: 50% !important;
+    }
 }
 
 @-webkit-keyframes sideNavEnter {
@@ -54,7 +61,7 @@ html, body {
 
 /* toolbar */
 .main-toolbar {
-    background-color: #C5CAE9 !important;
+    background-color: #8C9EFF !important;
     color: black !important;
     width: 0%;
     -webkit-animation: toolBarEnter 1s ease forwards;
@@ -83,7 +90,14 @@ html, body {
     background-color: #000000;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 100% auto;
+}
+
+@media screen and (max-width: 960px) {
+
+    .main-view {
+        background-size: 100% 100%;
+    }
 }
 
 /* main view content */
