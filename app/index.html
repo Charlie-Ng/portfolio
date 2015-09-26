@@ -23,15 +23,15 @@
 
      <!--profile picture-->
     <header class="main-header">
-        <a href="#/" ng-click="resetOption()"><img src="" alt="profile" class="main-profile"></a>
+        <a href="#/" ng-click="resetOption()"><img src="content/images/p3.png" alt="profile" class="main-profile"></a>
     </header>
 
      <!--options-->
     <md-content role="navigation" style="overflow: hidden;">
         <md-list>
-            <md-list-item class="main-list-item" ng-repeat="m in menuOptions" ng-class="{'main-option-active': isActive(m)}">
+            <md-list-item class="main-list-item" ng-repeat="m in menuOptions" ng-class="{'main-option-active': isActive(m.name)}">
                 <md-button ng-href="#/{{m.name}}"
-                           class="main-menu-button" ng-click="getCurrentOption(m)">
+                           class="main-menu-button" ng-click="setCurrentOption(m.name)">
                     <md-icon md-svg-src="content/icons/{{m.icon}}" aria-label="icon" style="margin-right: 32px;"></md-icon>
                     {{::m.name}}
                 </md-button>
@@ -43,7 +43,7 @@
 <div layout="column" tabIndex="-1" role="main" flex>
 
      <!-- Toolbar -->
-    <md-toolbar hide-gt-sm class="main-toolbar md-whiteframe-z2">
+    <md-toolbar class="main-toolbar md-whiteframe-z2" ng-class="{'hide-gt-sm': isMainPage}">
         <div class="md-toolbar-tools">
             <md-button ng-click="toggleNav()" class="md-icon-button" hide-gt-sm>
                 <md-icon md-svg-src="content/icons/list_black_48px.svg" aria-label="toggle menu button"></md-icon>

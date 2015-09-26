@@ -8,7 +8,7 @@
     angular.module('appControllers', []);
 
     angular.module('appControllers').controller('appCtrl',
-        ['$scope', '$mdSidenav','$window', 'mainService', function($scope, $mdSidenav, $window, mainService) {
+        ['$scope', '$mdSidenav','$window', 'mainService', '$timeout', function($scope, $mdSidenav, $window, mainService, $timeout) {
 
             /*
              * sidenav show/hide function
@@ -30,7 +30,11 @@
                 { name: "Blog", icon: "ic_book_white_48px.svg"}
             ];
 
+            /*
+             * variable that stores the selected option
+             */
             $scope.selected = "";
+
             /*
              * display current option in toolbar
              */
@@ -39,9 +43,9 @@
             /*
              * function changing the current option when clicked
              */
-            $scope.getCurrentOption = function(option) {
+            $scope.setCurrentOption = function(option) {
 
-                $scope.currentOption = option.name;
+                $mdSidenav('left').close();
                 $scope.selected = option;
             };
 
@@ -51,7 +55,6 @@
             $scope.resetOption = function() {
 
                 $window.location.reload();
-                $scope.currentOption = "";
             };
 
             /*
@@ -61,6 +64,23 @@
 
                 return $scope.selected === option;
             };
+
+            /*
+             * variable that watches the route for hide-gt-sm
+             */
+            $scope.isMainPage = true;
+
+            /*
+             * function that set hide-gt-sm to main toolbar based on route
+             */
+            $scope.$on('$locationChangeStart', function(next, current) {
+
+                var currentUrlAry = current.split('/');
+                var option = currentUrlAry[currentUrlAry.length - 1];
+                $scope.isMainPage = option === "";
+                $scope.currentOption = option;
+                $scope.selected = option;
+            });
 
             /*
              * string url that stores the background image
@@ -89,7 +109,6 @@
                             var photoRef = photosRef[index];
 
                             $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
-                            console.log($scope.backGrounds);
                         }
                     }
                     else {
