@@ -14,8 +14,7 @@
                     templateUrl: 'templates/about/about.html'
                 })
                 .when('/Projects', {
-                    templateUrl: 'templates/projects/projects.html', // FIXME: temporarily use app/components...
-                    controller: 'appCtrl'
+                    templateUrl: 'templates/projects/projects.html' // FIXME: temporarily use app/components...
                 })
                 .when('/Resume', {
                     controller: 'resumeCtrl',
