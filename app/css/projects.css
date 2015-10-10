@@ -1,3 +1,7 @@
-.projects-view {
-    overflow-y: scroll;
+.projects-view h3{
+    color: #000000;
+}
+
+.projects-view md-grid-list {
+    background-color: #ffffff;
 }
