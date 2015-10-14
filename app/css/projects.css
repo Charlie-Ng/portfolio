@@ -1,7 +1,8 @@
-.projects-view h3{
-    color: #000000;
+.projects-all-cards img {
+    width: 300px;
 }
 
-.projects-view md-grid-list {
-    background-color: #ffffff;
+.projects-card-footers {
+    padding: 4px 0 4px 0;
+    background-color: #bdbdbd;
 }

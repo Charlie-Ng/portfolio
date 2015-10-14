@@ -1,6 +1,16 @@
-<div class="all-view projects-view" layout-padding flex>
-
-
-
-
+<div class="all-view projects-view"flex>
+    <div ng-repeat="project in myProjects" class="projects-all-cards">
+    <md-card>
+        <div layout-gt-md="row" layout-padding>
+            <a><img ng-src="{{project.img}}"></a>
+            <md-card-content>
+                <h3>{{::project.name}}</h3>
+                <p>{{::project.projectDescription}}</p>
+            </md-card-content>
+        </div>
+        <md-card-footer class="projects-card-footers" layout="row" layout-align="end center">
+            <md-button ng-href="{{::project.url}}" target="_blank"><md-icon md-svg-src="content/icons/ic_laptop_mac_black_48px.svg"></md-icon>View</md-button>
+        </md-card-footer>
+    </md-card>
+    </div>
 </div>

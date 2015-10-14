@@ -9,6 +9,50 @@
     angular.module('appControllers').controller('resumeCtrl',
         ['$scope', function($scope) {
 
+            $scope.myProjects = [];
+
+            /*
+             * array that stores the project objects
+             */
+            $scope.myProjects = [
+
+                {
+                    name: "Aggie Feed",
+                    projectDescription: "A Twitter-like campus activity stream that displays information and events submitted by approved campus departments and organizations.",
+                    generalDescription: "Design and implement a Twitter-like app for UC Davis in a team of 5.",
+                    languages: "Using AngularJS, Angular Material, NodeJS, and Protractor",
+                    url: "http://aggiefeed.ucdavis.edu",
+                    img: "content/images/aggieFeedImg.png"
+                },
+
+                {
+                    name: "My Portfolio",
+                    projectDescription: "A mobile-responsive web application that has my up-to-date information",
+                    generalDescription: "Design and implement my portfolio web app u",
+                    languages: "Using AngularJS, Angular Material, ExpressJS",
+                    url: "www.xxx",
+                    img: ""
+                },
+
+                {
+                    name: "Task Management Web App",
+                    projectDescription: "A mobile-responsive web application that helps keep track of task with a login system.",
+                    generalDescription: "Designed and implement a to-do-list like web app with a login system",
+                    languages: "Using JavaScript, HTML/CSS, Bootstrap, and MeteorJS",
+                    url: "www.xxx",
+                    img: ""
+                },
+
+                {
+                    name: "First personal website",
+                    projectDescription: "My first personal mobile-responsive website.",
+                    generalDescription: "Designed and implemented my first personal website",
+                    languages: "Using JavaScript, HTML/CSS, Bootstrap",
+                    url: "www.xxx",
+                    img: ""
+                }
+            ];
+
             /*
              * object that stores resume information
              */
@@ -129,10 +173,6 @@
                     }
                 },
                 
-                projects: {
-                    
-                },
-                
                 leadership: {
                     
                 },
@@ -152,7 +192,7 @@
 
                     return b.length - a.length;
                 });
-            }
+            };
 
         }]);
 }());

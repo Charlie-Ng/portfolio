@@ -14,18 +14,18 @@ module.exports = function(grunt){
                 'app/services/*.js',
                 'app/templates/resume/*.js'
         	]
+        },
+
+        concat : {
+        	all : {
+	         	src : [
+                    'app/app.modules.js',
+                    'app/app.controllers.js',
+                    'app/app.routes.js'
+	         	],
+	         	dest : 'app/production.js'
+        	}
         }
-        //
-        //concat : {
-        //	all : {
-	     //    	src : [
-        //            'app/app.modules.js',
-        //            'app/app.controllers.js',
-        //            'app/app.routes.js'
-	     //    	],
-	     //    	dest : 'app/production.js'
-        //	}
-        //}
     });
 
 

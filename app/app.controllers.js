@@ -26,7 +26,7 @@
                 { name: "About", icon: "ic_info_outline_white_48px.svg"},
                 { name: "Projects", icon: "ic_library_books_white_48px.svg"},
                 { name: "Resume", icon: "ic_description_white_48px.svg"},
-                { name: "Contact", icon: "ic_contact_phone_white_48px.svg"},
+                //{ name: "Contact", icon: "ic_contact_phone_white_48px.svg"},
                 { name: "Blog", icon: "ic_book_white_48px.svg"}
             ];
 
