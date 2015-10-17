@@ -1,6 +1,6 @@
 .projects-app-images{
     width: 300px;
-    height: 280px;
+    height: 240px;
 }
 
 .projects-all-cards p {
@@ -9,17 +9,20 @@
 
 .projects-all-cards .md-button {
     width: 50px;
+}
+
+.projects-all-cards md-card-content .md-button {
     padding-top: 12px;
 }
 
 @media screen and (max-width: 900px) {
-    /*.projects-all-cards img {*/
-        /*width: 300px;*/
-        /*height: 280px;*/
-    /*}*/
+    .projects-app-images {
+        width: 300px;
+        height: 280px;
+    }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .projects-app-images {
         width: 90%;
         height: 90%;

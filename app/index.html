@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
 
     <!-- manually created css file -->
-    <!--<link rel="stylesheet" href="css/main.css">-->
-    <!--<link rel="stylesheet" href="css/about.css">-->
-    <!--<link rel="stylesheet" href="css/resume.css">-->
-    <!--<link rel="stylesheet" href="css/projects.css">-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/projects.css">
 
     <!-- production css file -->
-    <link rel="stylesheet" href="production.css">
+    <!--<link rel="stylesheet" href="production.css">-->
 </head>
 
 <body ng-controller="appCtrl" layout="row" ng-cloak>
@@ -31,7 +31,7 @@
     </header>
 
      <!--options-->
-    <md-content role="navigation" style="overflow: hidden;">
+    <md-content role="navigation" style="overflow-x:hidden; overflow-y: scroll">
         <md-list>
             <md-list-item class="main-list-item" ng-repeat="m in menuOptions" ng-class="{'main-option-active': isActive(m.name)}">
                 <md-button ng-href="#/{{m.name}}"
