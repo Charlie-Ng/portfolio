@@ -1,5 +1,29 @@
-.projects-all-cards img {
+.projects-app-images{
     width: 300px;
+    height: 280px;
+}
+
+.projects-all-cards p {
+    font-size: 20px;
+}
+
+.projects-all-cards .md-button {
+    width: 50px;
+    padding-top: 12px;
+}
+
+@media screen and (max-width: 900px) {
+    /*.projects-all-cards img {*/
+        /*width: 300px;*/
+        /*height: 280px;*/
+    /*}*/
+}
+
+@media screen and (max-width: 900px) {
+    .projects-app-images {
+        width: 90%;
+        height: 90%;
+    }
 }
 
 .projects-card-footers {

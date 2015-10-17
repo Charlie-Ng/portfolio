@@ -26,7 +26,7 @@ html, body {
 .main-sidenav {
     background-color: #3F51B5;
     overflow: hidden;
-    -webkit-animation: sideNavEnter 1s ease-in 3s forwards;
+    -webkit-animation: sideNavEnter 1s ease-in 2s forwards;
 }
 
 @media screen and (max-width: 600px) {

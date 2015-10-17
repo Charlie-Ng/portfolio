@@ -22,7 +22,8 @@
                     generalDescription: "Design and implement a Twitter-like app for UC Davis in a team of 5.",
                     languages: "Using AngularJS, Angular Material, NodeJS, and Protractor",
                     url: "http://aggiefeed.ucdavis.edu",
-                    img: "content/images/aggieFeedImg.png"
+                    img: "content/images/aggieFeedImg.png",
+                    github: ""
                 },
 
                 {
@@ -30,8 +31,9 @@
                     projectDescription: "A mobile-responsive web application that has my up-to-date information",
                     generalDescription: "Design and implement my portfolio web app u",
                     languages: "Using AngularJS, Angular Material, ExpressJS",
-                    url: "www.xxx",
-                    img: ""
+                    url: "http://kitchiong.com",
+                    img: "content/images/portfiloWeb.png",
+                    github: "https://github.com/Charlie-Ng/portfolio"
                 },
 
                 {
@@ -39,17 +41,9 @@
                     projectDescription: "A mobile-responsive web application that helps keep track of task with a login system.",
                     generalDescription: "Designed and implement a to-do-list like web app with a login system",
                     languages: "Using JavaScript, HTML/CSS, Bootstrap, and MeteorJS",
-                    url: "www.xxx",
-                    img: ""
-                },
-
-                {
-                    name: "First personal website",
-                    projectDescription: "My first personal mobile-responsive website.",
-                    generalDescription: "Designed and implemented my first personal website",
-                    languages: "Using JavaScript, HTML/CSS, Bootstrap",
-                    url: "www.xxx",
-                    img: ""
+                    url: "http://todocharlie.meteor.com",
+                    img: "content/images/todoWeb.png",
+                    github: ""
                 }
             ];
 

@@ -2,10 +2,11 @@
     <div ng-repeat="project in myProjects" class="projects-all-cards">
     <md-card>
         <div layout-gt-md="row" layout-padding>
-            <a><img ng-src="{{project.img}}"></a>
+            <a ng-href="{{::project.url}}" target="_blank"><img class="projects-app-images" ng-src="{{project.img}}"></a>
             <md-card-content>
                 <h3>{{::project.name}}</h3>
                 <p>{{::project.projectDescription}}</p>
+                <md-button ng-if="project.github.length" ng-href="{{::project.github}}" target="_blank"><img src="content/images/githublogo.png"></md-button>
             </md-card-content>
         </div>
         <md-card-footer class="projects-card-footers" layout="row" layout-align="end center">
