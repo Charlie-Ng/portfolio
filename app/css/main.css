@@ -34,6 +34,11 @@ html, body {
     .main-profile {
         width: 50% !important;
     }
+
+    .main-sidenav {
+        -webkit-animation: none;
+        max-width: 256px !important;
+    }
 }
 
 @-webkit-keyframes sideNavEnter {
@@ -67,14 +72,14 @@ html, body {
 .main-toolbar {
     background-color: #8C9EFF !important;
     color: black !important;
-    width: 0%;
-    -webkit-animation: toolBarEnter 1s ease forwards;
+    width: 100%;
+    /*-webkit-animation: toolBarEnter 4s ease 5s forwards;*/
 }
 
-@-webkit-keyframes toolBarEnter {
-    from {width: 0%}
-    to {width: 100%}
-}
+/* FIXME: add animation */
+/*@-webkit-keyframes toolBarEnter {*/
+    /*to {max-height: 56px; height: 56px}*/
+/*}*/
 
 .main-all-view {
     background-color: #E0E0E0;
@@ -82,18 +87,15 @@ html, body {
 
 /* all-view */
 .all-view {
-    margin: 0px;
+    margin: 4px;
     opacity: 0;
-    -webkit-animation: mainView 2s ease-in forwards, mainViewMargin 1s ease-in 3s forwards;
+    -webkit-animation: mainView 2s ease-in forwards;
 }
 
 @-webkit-keyframes mainView {
     to {opacity: 1}
 }
 
-@-webkit-keyframes mainViewMargin {
-    to {margin: 8px}
-}
 
 .main-view {
     overflow: hidden;
@@ -205,3 +207,9 @@ md-sidenav.md-closed.md-locked-open-add-active {
     width: 256px !important;
     max-width: 0px !important;
 }
+
+/*md-toolbar {*/
+    /*min-height: 0px !important;*/
+    /*width: 256px !important;*/
+    /*max-height: 0px !important;*/
+/*}*/
