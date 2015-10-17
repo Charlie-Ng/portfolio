@@ -160,7 +160,7 @@
         width: 0;
     }
     to {
-        width: 27ch;
+        width: 28ch;
     }
 }
 
@@ -194,7 +194,7 @@
         width: 0;
     }
     to {
-        width: 40ch;
+        width: 34ch;
     }
 }
 
@@ -228,7 +228,7 @@
         width: 0;
     }
     to {
-        width: 45ch;
+        width: 43ch;
     }
 }
 
@@ -250,12 +250,12 @@
 .about-logos .md-button{
     width: 50px;
     padding-top: 12px;
-    opacity: 0;
-    -webkit-animation: about-logos-opacity 2s ease-in 10s forwards;
+    visibility: visible;
+    /*-webkit-animation: about-logos-visible 2s ease-in 10s forwards;*/
 }
 
-@-webkit-keyframes about-logos-opacity {
-    to {opacity: 1}
+@-webkit-keyframes about-logos-visible {
+    to {visibility: visible}
 }
 
 .about-logos img{
@@ -268,11 +268,9 @@
     }
 
     .about-logos .md-button{
-        margin: 0px;
-        opacity: 1;
+        visibility: visible;
         -webkit-animation: none;
     }
-
 }
 
 @media screen and (max-width: 600px) {
