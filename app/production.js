@@ -6,7 +6,46 @@
 
     'use strict';
 
-    angular.module('portfolio', ['ngMaterial', 'mainCtrl']);
+    angular.module('portfolio', ['ngRoute', 'ngMaterial', 'appControllers', 'appServices'])
+        .config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
+
+            $routeProvider
+                .when('/About', {
+                    templateUrl: 'templates/about/about.html'
+                })
+                .when('/Projects', {
+                    controller: 'resumeCtrl',
+                    templateUrl: 'templates/projects/projects.html' // FIXME: temporarily use app/components...
+                })
+                .when('/Resume', {
+                    controller: 'resumeCtrl',
+                    templateUrl: 'templates/resume/resume.html'
+                })
+                .when('/Contact', {
+                    templateUrl: 'templates/contact/contact.html'
+                })
+                .when('/Blog', {
+                    templateUrl: 'templates/blog/blog.html'
+                })
+                .when('/', {
+                    templateUrl: 'templates/main/main.html'
+                })
+                .otherwise({
+                    templateUrl: 'templates/main/main.html'
+                    //redirectTo: '/'
+                });
+                //.when('/Resume', {
+                //    templateUrl: 'app/components/resume/resume.html'
+                //})
+                //.when('/About', {
+                //    templateUrl: 'app/components/about/about.html'
+                //})
+
+            // FIXME: enable html5Mode when server is set up; because this requires web server
+            //$locationProvider.html5Mode({"enabled": true, "requireBase": false});
+        }]);
+
+    angular.module('appServices', []);
 
 }());
 /**
@@ -16,14 +55,358 @@
 
     'use strict';
 
-    angular.module('mainCtrl', []);
+    angular.module('appControllers', []);
 
-    angular.module('mainCtrl').controller('indexCtrl',
-        ['$scope', function($scope) {
+    angular.module('appControllers').controller('appCtrl',
+        ['$scope', '$mdSidenav','$window', 'mainService', '$timeout', function($scope, $mdSidenav, $window, mainService, $timeout) {
 
-            $scope.helloWord = "hello";
+            /*
+             * sidenav show/hide function
+             */
+            $scope.toggleNav = function() {
 
+                $mdSidenav('left').toggle();
+            };
+
+            /*
+             * menu options
+             */
+            $scope.menuOptions = [
+
+                { name: "About", icon: "ic_info_outline_white_48px.svg"},
+                { name: "Projects", icon: "ic_library_books_white_48px.svg"},
+                { name: "Resume", icon: "ic_description_white_48px.svg"},
+                //{ name: "Contact", icon: "ic_contact_phone_white_48px.svg"},
+                { name: "Blog", icon: "ic_book_white_48px.svg"}
+            ];
+
+            /*
+             * variable that stores the selected option
+             */
+            $scope.selected = "";
+
+            /*
+             * display current option in toolbar
+             */
+            $scope.currentOption = "";
+
+            /*
+             * function changing the current option when clicked
+             */
+            $scope.setCurrentOption = function(option) {
+
+                $mdSidenav('left').close();
+                $scope.selected = option;
+            };
+
+            /*
+             * function that resets the toolbar option
+             */
+            $scope.resetOption = function() {
+
+                $window.location.reload();
+            };
+
+            /*
+             * function that determines which item is selected
+             */
+            $scope.isActive = function(option) {
+
+                return $scope.selected === option;
+            };
+
+            /*
+             * variable that watches the route for hide-gt-sm
+             */
+            $scope.isMainPage = true;
+
+            /*
+             * function that set hide-gt-sm to main toolbar based on route
+             */
+            $scope.$on('$locationChangeStart', function(next, current) {
+
+                var currentUrlAry = current.split('/');
+                var option = currentUrlAry[currentUrlAry.length - 1];
+                $scope.isMainPage = option === "";
+                $scope.currentOption = option;
+                $scope.selected = option;
+            });
+
+            /*
+             * string url that stores the background image
+             */
+            $scope.backGrounds = "";
+
+            (function getBackgrounds() {
+
+                mainService.getBackgrounds(function(err, data) {
+
+                    if(err) {
+
+                        console.error("ERROR: getting main background image");
+                    }
+                    else if(data) {
+
+                        if(data.photos.photo.length === 0) {
+
+                            console.warn("WARNING: no photo received");
+                            $scope.backGrounds = "some default image";
+                        }
+                        else if(data.stat === "ok") {
+
+                            var photosRef = data.photos.photo;
+                            var index = Math.floor((Math.random() * photosRef.length) + 0);
+                            var photoRef = photosRef[index];
+
+                            $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
+                            console.log($scope.backGrounds);
+                        }
+                    }
+                    else {
+
+                        console.error("ERROR: unknown error: getting main background image ");
+                    }
+                });
+            })();//end of self-invoked function getBackgrounds
     }]);
 
+}());
+/**
+ * Created by kitchiong on 9/17/15.
+ */
 
+(function() {
+
+    'use strict';
+
+    angular.module('appServices').factory('mainService',
+        ['$http',
+            function($http) {
+
+                var MainService = {};
+
+                /*
+                 * function that gets image JSON from flickr
+                 */
+                MainService.getBackgrounds = function(callback) {
+
+                    $http(
+                        {
+
+                            "method": "get",
+                            "url": "https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&extras=original_format&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json&nojsoncallback=1"
+                        })
+                    //$http.jsonp("https://api.flickr.com/services/rest/?&method=flickr.favorites.getList&api_key=530881793e24af5bd2e1bff43b9eb760&user_id=135578447@N04&format=json")
+                        .success(function(data) {
+
+                            callback(false, data);
+                        })
+                        .error(function(data, status, header, config) {
+
+                            callback(true, null);
+                        });
+                };
+
+                return MainService;
+            }
+        ]
+    );
+}());
+/**
+ * Created by kitchiong on 9/22/15.
+ */
+
+(function (){
+
+    'use strict';
+
+    angular.module('appControllers').controller('resumeCtrl',
+        ['$scope', function($scope) {
+
+            $scope.myProjects = [];
+
+            /*
+             * array that stores the project objects
+             */
+            $scope.myProjects = [
+
+                {
+                    name: "Aggie Feed",
+                    projectDescription: "A Twitter-like campus activity stream that displays information and events submitted by approved campus departments and organizations.",
+                    generalDescription: "Design and implement a Twitter-like app for UC Davis in a team of 5.",
+                    languages: "Using AngularJS, Angular Material, NodeJS, and Protractor",
+                    url: "http://aggiefeed.ucdavis.edu",
+                    img: "content/images/aggieFeedImg.png"
+                },
+
+                {
+                    name: "My Portfolio",
+                    projectDescription: "A mobile-responsive web application that has my up-to-date information",
+                    generalDescription: "Design and implement my portfolio web app u",
+                    languages: "Using AngularJS, Angular Material, ExpressJS",
+                    url: "www.xxx",
+                    img: ""
+                },
+
+                {
+                    name: "Task Management Web App",
+                    projectDescription: "A mobile-responsive web application that helps keep track of task with a login system.",
+                    generalDescription: "Designed and implement a to-do-list like web app with a login system",
+                    languages: "Using JavaScript, HTML/CSS, Bootstrap, and MeteorJS",
+                    url: "www.xxx",
+                    img: ""
+                },
+
+                {
+                    name: "First personal website",
+                    projectDescription: "My first personal mobile-responsive website.",
+                    generalDescription: "Designed and implemented my first personal website",
+                    languages: "Using JavaScript, HTML/CSS, Bootstrap",
+                    url: "www.xxx",
+                    img: ""
+                }
+            ];
+
+            /*
+             * object that stores resume information
+             */
+            $scope.myResume = {
+
+                basics : {
+
+                    firstName: "Kit Chio",
+                    lastName: "Ng",
+                    fullName: "Ng, Kit Chio",
+                    nickName: "Charlie",
+                    phone: "408-221-2865",
+                    email: "kcng@ucdavis.edu"
+                },
+                
+                objective: "To obtain a job in xxxxx in the field of Computer Science",
+                
+                education: {
+                    
+                    university: "University of California, Davis",
+                    shortUName: "UC Davis",
+                    major: "Computer Science, BS",
+                    shortMajor: "CS, BS",
+                    minor: "none",
+                    GPA: "3.41/4.0",
+                    graduateDate: "June 2016",
+                    courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming",
+                        "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Abstract Mathematics", "Combinatorics"]
+                },
+                
+                skills: {
+
+                    languages: ["Java", "JavaScript", "C", "C++", "HTML5/CSS3", "Git", "AngularJS", "Lunix"],
+                    webLang: ["JavaScript", "AngularJS", "HTML5/CSS3", "MongoDB"],
+                    java: {
+
+                        name: "Java",
+                        rate: 8
+                    },
+
+                    javascript: {
+
+                        name: "JavaScript",
+                        rate: 9
+                    },
+
+                    c: {
+
+                        name: "C",
+                        rate: 8
+                    },
+
+                    cpp: {
+
+                        name: "C++",
+                        rate: 7
+                    },
+
+                    html5css3: {
+
+                        name: "HTML5/CSS3",
+                        rate: 9
+                    },
+
+                    angularjs: {
+
+                        name: "AngularJS",
+                        rate: 9
+                    },
+
+                    git: {
+
+                        name: "Git",
+                        rate: 7
+                    },
+
+                    lunix: {
+
+                        name: "Lunix",
+                        rate: 6
+                    }
+                },
+                
+                experiences: {
+
+                    job1 : {
+
+                        title: "Applications Developer",
+                        company: "UC Davis",
+                        period: "June 2015 - present",
+                        oneLine: "Application Developer, UC Davis, June 2015 - present",
+                        duties: {
+
+                            duty1: "Designed and implemented UC Davis Aggiefeed, a Twitter-like web application streaming campus news, event, and activities."
+                        }
+                    },
+
+                    job2 : {
+
+                        title: "Web Designer/Developer Intern",
+                        company: "UC Davis",
+                        period: "March 2015 - June 2015 (3 months)",
+                        duties : {
+
+                            duty1: "Redesigned and implemented UC Davis Physical department website."
+                        }
+                    },
+
+                    job3 : {
+
+                        title: "Math Tutor",
+                        company: "De Anza College",
+                        period: "Sep 2013 - June 2014 (9 months)",
+                        duties : {
+
+                            duty1: "xxxxxxxxxx xxx xxxxxxxxxxxxx xxx  xxx"
+                        }
+                    }
+                },
+                
+                leadership: {
+                    
+                },
+                
+                awards: {
+                    
+                },
+                
+                links: {
+                    
+                }
+            };
+
+            $scope.sortCourses =function() {
+
+                $scope.myResume.education.courses.sort(function(a, b) {
+
+                    return b.length - a.length;
+                });
+            };
+
+        }]);
 }());

@@ -26,7 +26,7 @@ html, body {
 .main-sidenav {
     background-color: #3F51B5;
     overflow: hidden;
-    -webkit-animation: sideNavEnter 1s ease-in forwards;
+    -webkit-animation: sideNavEnter 1s ease-in 3s forwards;
 }
 
 @media screen and (max-width: 600px) {
@@ -37,8 +37,12 @@ html, body {
 }
 
 @-webkit-keyframes sideNavEnter {
-    from {height: 0%}
-    to {height: 100%}
+    from {
+        max-width: 0;
+    }
+    to {
+        max-width: 256px;
+    }
 }
 
 .main-sidenav md-list {
@@ -72,15 +76,23 @@ html, body {
     to {width: 100%}
 }
 
+.main-all-view {
+    background-color: #E0E0E0;
+}
+
 /* all-view */
 .all-view {
-    margin: 16px;
+    margin: 0px;
     opacity: 0;
-    -webkit-animation: mainView 2s ease-in forwards;
+    -webkit-animation: mainView 2s ease-in forwards, mainViewMargin 1s ease-in 3s forwards;
 }
 
 @-webkit-keyframes mainView {
     to {opacity: 1}
+}
+
+@-webkit-keyframes mainViewMargin {
+    to {margin: 8px}
 }
 
 .main-view {
@@ -189,7 +201,7 @@ html, body {
 md-sidenav,
 md-sidenav.md-locked-open,
 md-sidenav.md-closed.md-locked-open-add-active {
-    min-width: 240px !important;
+    min-width: 0px !important;
     width: 256px !important;
-    max-width: 256px !important;
+    max-width: 0px !important;
 }

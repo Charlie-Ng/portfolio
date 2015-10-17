@@ -18,19 +18,35 @@ module.exports = function(grunt){
 
         concat : {
         	all : {
-	         	src : [
+	        	src : [
+             //       'app/bower_components/angular/angular.js',
+             //       'app/bower_components/angular-aria/angular-aria.js',
+             //       'app/bower_components/angular-animate/angular-animate.js,',
+             //       'app/bower_components/angular-material/angular-material.js',
+             //       'app/bower_components/angular-route/angular-route.js',
                     'app/app.modules.js',
                     'app/app.controllers.js',
-                    'app/app.routes.js'
-	         	],
-	         	dest : 'app/production.js'
-        	}
+                    'app/services/mainService.js',
+                    'app/templates/resume/resumeCtrl.js'
+	        	],
+	        	dest : 'app/production.js'
+        	},
+            css : {
+                src : [
+                    //'app/bower_components/angular-material/angular-material.css',
+                    'app/css/main.css',
+                    'app/css/about.css',
+                    'app/css/resume.css',
+                    'app/css/projects.css'
+                ],
+                dest : 'app/production.css'
+            }
         }
     });
 
 
 
     // define the default task that executes when we run 'grunt' from inside the project
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['jshint', 'concat']);
 
 };

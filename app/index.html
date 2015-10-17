@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/projects.css">
+
+    <!-- production css file -->
+    <!--<link rel="stylesheet" href="production.css">-->
 </head>
 
 <body ng-controller="appCtrl" layout="row" ng-cloak>
@@ -54,7 +57,7 @@
     </md-toolbar>
 
     <!-- ng-view templates -->
-    <md-content style="background-color: #E0E0E0;" flex ng-view layout="column">
+    <md-content class="main-all-view" flex ng-view layout="column">
     </md-content>
 </div>
 
@@ -66,10 +69,13 @@
 <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 
 <!-- manually created js file-->
-<script type="text/javascript" src="app.modules.js"></script>
-<script type="text/javascript" src="app.controllers.js"></script>
-<script type="text/javascript" src="services/mainService.js"></script>
-<script type="text/javascript" src="templates/resume/resumeCtrl.js"></script>
+<!--<script type="text/javascript" src="app.modules.js"></script>-->
+<!--<script type="text/javascript" src="app.controllers.js"></script>-->
+<!--<script type="text/javascript" src="services/mainService.js"></script>-->
+<!--<script type="text/javascript" src="templates/resume/resumeCtrl.js"></script>-->
+
+<!-- production js -->
+<script type="text/javascript" src="production.js"></script>
 
 </body>
 </html>
