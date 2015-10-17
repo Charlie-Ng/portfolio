@@ -59,10 +59,10 @@
                     fullName: "Ng, Kit Chio",
                     nickName: "Charlie",
                     phone: "408-221-2865",
-                    email: "kcng@ucdavis.edu"
+                    email: "Please download PDF version to view"
                 },
                 
-                objective: "To obtain a job in xxxxx in the field of Computer Science",
+                objective: "To obtain a full-time position as a full-stack developer/software engineer in the field of Computer Science.",
                 
                 education: {
                     
@@ -139,8 +139,8 @@
                         period: "June 2015 - present",
                         oneLine: "Application Developer, UC Davis, June 2015 - present",
                         duties: {
-
-                            duty1: "Designed and implemented UC Davis Aggiefeed, a Twitter-like web application streaming campus news, event, and activities."
+                            duty1: "・Work on a UC Davis app 'Aggiefeed', a Twitter-like campus activity stream. 'https://aggiefeed.ucdavis.edu'\n" +
+                            "・Technologies used: AngularJS, Angular Material, HTML5/CSS3, NodeJS, Jasmine, Grunt, etc."
                         }
                     },
 
@@ -148,10 +148,9 @@
 
                         title: "Web Designer/Developer Intern",
                         company: "UC Davis",
-                        period: "March 2015 - June 2015 (3 months)",
+                        period: "March 2015 - June 2015",
                         duties : {
-
-                            duty1: "Redesigned and implemented UC Davis Physical department website."
+                            duty1: "・Redesigned, updated, and modified websites for Physical Education Department 'http://pe.ucdavis.edu/'"
                         }
                     },
 
@@ -159,24 +158,27 @@
 
                         title: "Math Tutor",
                         company: "De Anza College",
-                        period: "Sep 2013 - June 2014 (9 months)",
+                        period: "Sep 2013 - June 2014",
                         duties : {
 
-                            duty1: "xxxxxxxxxx xxx xxxxxxxxxxxxx xxx  xxx"
+                            duty1: "・tutored students with different Math levels, from Algebra to Calculus."
                         }
                     }
                 },
                 
                 leadership: {
-                    
+
+                    leadership1: "・Technician, Chinese Student Association at UC Davis. (October, 2014 – Present)\n・President, Mathematics Club at De Anza College. (March, 2013 – June, 2014)"
                 },
                 
                 awards: {
-                    
+
+                    award1: "・Student Excellence Scholarship, received at UC Davis (October, 2015)\n・Carolee Erickson Memorial ICC Scholarship (Student club scholarship), received at De Anza College. (March, 2014)"
                 },
                 
                 links: {
-                    
+
+                    link1: "GitHub: www.github.com/Charlie-Ng\nLinkedIn: www.linkedin.com/in/kitchiong\nPortfolio: www.kitchiong.com"
                 }
             };
 

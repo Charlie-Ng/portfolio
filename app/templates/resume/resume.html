@@ -162,7 +162,7 @@
 
                     <md-input-container flex>
                         <label>Duties</label>
-                        <textarea ng-model="myResume.experiences.job1.duties.duty1"></textarea>
+                        <textarea ng-readonly="true" ng-model="myResume.experiences.job1.duties.duty1"></textarea>
                     </md-input-container>
                 </div>
 
@@ -185,7 +185,7 @@
 
                     <md-input-container flex>
                         <label>Duties</label>
-                        <textarea ng-model="myResume.experiences.job2.duties.duty1"></textarea>
+                        <textarea ng-readonly="true" ng-model="myResume.experiences.job2.duties.duty1"></textarea>
                     </md-input-container>
                 </div>
 
@@ -208,9 +208,19 @@
 
                     <md-input-container flex>
                         <label>Duties</label>
-                        <textarea ng-model="myResume.experiences.job3.duties.duty1"></textarea>
+                        <textarea ng-readonly="true" ng-model="myResume.experiences.job3.duties.duty1"></textarea>
                     </md-input-container>
                 </div>
+
+                <md-input-container>
+                    <label>Leadership</label>
+                    <textarea ng-readonly="true" ng-model="myResume.leadership.leadership1"></textarea>
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Awards</label>
+                    <textarea ng-readonly="true" ng-model="myResume.awards.award1"></textarea>
+                </md-input-container>
             </md-content>
         </md-tab>
 
@@ -218,6 +228,6 @@
     </md-content>
     <md-divider></md-divider>
     <md-content hide-sm layout="row" layout-align="end center" class="resume-footer">
-        <md-button><md-icon md-svg-src="content/icons/ic_get_app_black_48px.svg"></md-icon>PDF</md-button>
+        <md-button href="https://drive.google.com/file/d/0B63QbBsBhL1KWi1NaG1oSHZjdjQ/view?usp=sharing" target="_blank"><md-icon md-svg-src="content/icons/ic_get_app_black_48px.svg"></md-icon>PDF</md-button>
     </md-content>
 </md-content>

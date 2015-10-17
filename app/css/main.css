@@ -24,7 +24,7 @@ html, body {
 }
 
 .main-sidenav {
-    background-color: #3F51B5;
+    background-color: #283593;
     overflow: hidden;
     -webkit-animation: sideNavEnter 1s ease-in 2s forwards;
 }
@@ -51,7 +51,7 @@ html, body {
 }
 
 .main-sidenav md-list {
-    background-color: #3F51B5;
+    background-color:  #283593;
     padding: 0px;
 }
 
@@ -70,10 +70,14 @@ html, body {
 
 /* toolbar */
 .main-toolbar {
-    background-color: #8C9EFF !important;
+    background-color: #5C6BC0 !important;
     color: black !important;
     width: 100%;
     /*-webkit-animation: toolBarEnter 4s ease 5s forwards;*/
+}
+
+.main-toolbar h2 {
+    color: white;
 }
 
 /* FIXME: add animation */
