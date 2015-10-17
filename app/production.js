@@ -104,7 +104,7 @@
              */
             $scope.resetOption = function() {
 
-                $window.location.reload();
+                $window.location = "http://kitchiong.com";
             };
 
             /*

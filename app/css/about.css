@@ -75,9 +75,9 @@
     overflow: hidden;
     border-right: 2px solid black;
     -webkit-animation: about-typing-1 2s steps(60, start) forwards,
-    about-typing-bar-1 1s linear infinite, about-typing-bar-opacity-1 1s 2s forwards;
+    about-typing-bar-1 1s linear infinite, about-typing-bar-opacity-1 1s 1s forwards;
     animation: about-typing-1 2s steps(60, start) forwards,
-    about-typing-bar-1 1s linear infinite, about-typing-bar-opacity-1 1s 2s forwards;
+    about-typing-bar-1 1s linear infinite, about-typing-bar-opacity-1 1s 1s forwards;
 }
 
 @-webkit-keyframes about-typing-1 {
@@ -123,9 +123,9 @@
     overflow: hidden;
     border-right: 2px solid transparent;
     -webkit-animation: about-typing-2 1s 2s steps(40, start) forwards,
-    about-typing-bar-2 1s 2s linear infinite, about-typing-bar-opacity-2 1s 3s forwards;
+    about-typing-bar-2 1s 2s linear infinite, about-typing-bar-opacity-2 1s 2s forwards;
     animation: about-typing-2 1s 2s steps(40, start) forwards,
-    about-typing-bar-2 1s 2s linear infinite, about-typing-bar-opacity-2 1s 3s forwards;
+    about-typing-bar-2 1s 2s linear infinite, about-typing-bar-opacity-2 1s 2s forwards;
 }
 
 @-webkit-keyframes about-typing-2 {
@@ -183,9 +183,9 @@
     overflow: hidden;
     border-right: 2px solid transparent;
     -webkit-animation: about-typing-3 2s 3s steps(40, start) forwards,
-    about-typing-bar-3 1s 3s linear infinite, about-typing-bar-opacity-3 1s 5s forwards;
+    about-typing-bar-3 1s 3s linear infinite, about-typing-bar-opacity-3 1s 4s forwards;
     animation: about-typing-3 2s 3s steps(40, start) forwards,
-    about-typing-bar-3 1s 3s linear infinite, about-typing-bar-opacity-3 1s 5s forwards;
+    about-typing-bar-3 1s 3s linear infinite, about-typing-bar-opacity-3 1s 4s forwards;
 }
 
 @-webkit-keyframes about-typing-3 {
@@ -242,9 +242,9 @@
     width: 0;
     overflow: hidden;
     border-right: 2px solid transparent;
-    -webkit-animation: about-typing-4 2s 5s steps(40, start) forwards,
+    -webkit-animation: about-typing-4 4s 5s steps(60, start) forwards,
     about-typing-bar-4 1s 5s linear infinite, about-typing-bar-opacity-4 1s 7s forwards;
-    animation: about-typing-4 2s 5s steps(40, start) forwards,
+    animation: about-typing-4 4s 5s steps(60, start) forwards,
     about-typing-bar-4 1s 5s linear infinite, about-typing-bar-opacity-4 1s 7s forwards;
 }
 
@@ -253,7 +253,7 @@
          width: 0;
      }
      to {
-         width: 28ch;
+         width: 49ch;
      }
  }
 
@@ -277,7 +277,7 @@
         width: 0;
     }
     to {
-        width: 28ch;
+        width: 49ch;
     }
 }
 
@@ -302,10 +302,10 @@
     width: 0;
     overflow: hidden;
     border-right: 2px solid transparent;
-    -webkit-animation: about-typing-5 1s 7s steps(40, start) forwards,
-    about-typing-bar-5 1s 8s linear infinite, about-typing-bar-opacity-5 1s 8s forwards;
-    animation: about-typing-5 1s 7s steps(40, start) forwards,
-    about-typing-bar-5 1s 8s linear infinite, about-typing-bar-opacity-5 1s 8s forwards;
+    -webkit-animation: about-typing-5 3s 9s steps(60, start) forwards,
+    about-typing-bar-5 1s 9s linear infinite, about-typing-bar-opacity-5 1s 11s forwards;
+    animation: about-typing-5 3s 9s steps(60, start) forwards,
+    about-typing-bar-5 1s 9s linear infinite, about-typing-bar-opacity-5 1s 11s forwards;
 }
 
 @-webkit-keyframes about-typing-5 {
@@ -313,7 +313,7 @@
         width: 0;
     }
     to {
-        width: 34ch;
+        width: 40ch;
     }
 }
 
@@ -337,7 +337,7 @@
         width: 0;
     }
     to {
-        width: 34ch;
+        width: 40ch;
     }
 }
 
@@ -362,10 +362,10 @@
     width: 0;
     overflow: hidden;
     border-right: 2px solid transparent;
-    -webkit-animation: about-typing-6 1s 9s steps(40, start) forwards,
-    about-typing-bar-2 1s 9s linear infinite, about-typing-bar-opacity-2 1s 10s forwards;
-    animation: about-typing-6 1s 9s steps(40, start) forwards,
-    about-typing-bar-2 1s 9s linear infinite, about-typing-bar-opacity-2 1s 10s forwards;
+    -webkit-animation: about-typing-6 4s 12s steps(60, start) forwards,
+    about-typing-bar-2 1s 13s linear infinite, about-typing-bar-opacity-2 1s 15s forwards;
+    animation: about-typing-6 4s 12s steps(60, start) forwards,
+    about-typing-bar-2 1s 13s linear infinite, about-typing-bar-opacity-2 1s 15s forwards;
 }
 
 @-webkit-keyframes about-typing-6 {
@@ -373,7 +373,7 @@
         width: 0;
     }
     to {
-        width: 43ch;
+        width: 48ch;
     }
 }
 
@@ -397,7 +397,7 @@
         width: 0;
     }
     to {
-        width: 43ch;
+        width: 48ch;
     }
 }
 
