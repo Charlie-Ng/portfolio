@@ -822,3 +822,8 @@ md-sidenav.md-closed.md-locked-open-add-active {
     padding: 4px 0 4px 0;
     background-color: #bdbdbd;
 }
+
+.projects-quote {
+    font-style: italic;
+    text-align: center;
+}
