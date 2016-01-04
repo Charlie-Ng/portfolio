@@ -139,7 +139,7 @@ html, body {
 .main-name-copy {
     fill: none;
     stroke: #ffffff;
-    stroke-width: 2;
+    stroke-width: 1;
     stroke-dasharray: 1600;
     font-size: 96px;
     font-family: serif;
@@ -147,21 +147,7 @@ html, body {
     alignment-baseline: middle;
     stroke-dashoffset: 1600;
     animation: main-name-animation 4s linear 0s forwards, main-name-fill 8s linear 0s forwards;
-    -webkit-animation: main-name-animation 4s linear forwards, main-name-fill 8s linear forwards;
-}
-
-@keyframes main-name-animation {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes main-name-fill {
-    to {
-        fill: white;
-        stroke-width: 2;
-        opacity: 1;
-    }
+    -webkit-animation: main-name-animation 4s linear forwards, main-name-fill 6s linear forwards;
 }
 
 @-webkit-keyframes main-name-animation {
@@ -171,11 +157,48 @@ html, body {
 }
 
 @-webkit-keyframes main-name-fill {
-    to {
+    10% {
+        opacity: 0.2;
+        fill: #dadada;
+    }
+    30% {
+        opacity: 0.4;
+        fill: #dadada;
+    }
+    50% {
+        opacity: 0.8;
+        fill: #dadada;
+    }
+    100% {
         fill: #ffffff;
-        stroke-width: 0;
+        stroke-width: 1;
     }
  }
+
+@keyframes main-name-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes main-name-fill {
+    10% {
+        opacity: 0.2;
+        fill: #dadada;
+    }
+    30% {
+        opacity: 0.4;
+        fill: #dadada;
+    }
+    50% {
+        opacity: 0.8;
+        fill: #dadada;
+    }
+    100% {
+        fill: #ffffff;
+        stroke-width: 3;
+    }
+}
 
 .main-title-copy {
     fill: none;
@@ -204,6 +227,7 @@ html, body {
     60% {
         stroke-dashoffset: 0;
         opacity: 0.6;
+        fill: #dadada;
     }
     80% {
         stroke-dashoffset: 1200;
@@ -229,6 +253,7 @@ html, body {
     60% {
         stroke-dashoffset: 0;
         opacity: 0.6;
+        fill: #dadada;
     }
     80% {
         stroke-dashoffset: 1200;
@@ -251,12 +276,15 @@ html, body {
     text-anchor: middle;
     alignment-baseline: middle;
     opacity: 0;
-    animation: main-degree-animation 4s linear 2s forwards;
-    -webkit-animation: main-degree-animation 4s linear 2s forwards;
+    animation: main-degree-animation 4s linear 1s forwards;
+    -webkit-animation: main-degree-animation 4s linear 1s forwards;
 }
 
 @keyframes main-degree-animation {
-    to {
+    50% {
+        fill: #dadada;
+    }
+    100% {
         opacity: 1;
         stroke-width: 2;
         fill: #ffffff;
@@ -264,7 +292,10 @@ html, body {
 }
 
 @-webkit-keyframes main-degree-animation {
-    to {
+    50% {
+        fill: #dadada;
+    }
+    100% {
         opacity: 1;
         fill: #ffffff;
     }

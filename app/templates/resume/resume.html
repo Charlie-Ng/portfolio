@@ -89,6 +89,7 @@
                 </md-input-container>
 
                  <!--Programming languages-->
+                <md-content class="resume-slider-out-container"> <!-- need to fix -->
                 <div layout="row" layout-md="column" layout-sm="column" flex class="resume-slider-container">
                     <div flex layout="row" layout-align="start center">
                         <div class="md-body-1 resume-slider-text"><span>{{::myResume.skills.javascript.name}}</span></div>
@@ -136,6 +137,7 @@
                         <md-slider ng-disabled="true" flex md-discrete ng-model="::myResume.skills.git.rate" min="0" max="10" step="1" aria-label="red" aria-label="rating"></md-slider>
                     </div>
                 </div>
+                </md-content>
             </md-content>
         </md-tab>
 
