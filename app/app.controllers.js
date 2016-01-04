@@ -8,7 +8,7 @@
     angular.module('appControllers', []);
 
     angular.module('appControllers').controller('appCtrl',
-        ['$scope', '$mdSidenav','$window', 'mainService', '$timeout', function($scope, $mdSidenav, $window, mainService, $timeout) {
+        ['$scope', '$mdSidenav','$window', function($scope, $mdSidenav, $window) {
 
             /*
              * sidenav show/hide function
@@ -87,37 +87,45 @@
              */
             $scope.backGrounds = "";
 
-            (function getBackgrounds() {
+            function getBackgrounds() {
 
-                mainService.getBackgrounds(function(err, data) {
+                var bgName = "bg" + Math.floor((Math.random() * 5) + 1) + ".jpg";
+                $scope.backGrounds =  "content/images/" + bgName;
+            }
 
-                    if(err) {
+            getBackgrounds();
 
-                        console.error("ERROR: getting main background image");
-                    }
-                    else if(data) {
-
-                        if(data.photos.photo.length === 0) {
-
-                            console.warn("WARNING: no photo received");
-                            $scope.backGrounds = "some default image";
-                        }
-                        else if(data.stat === "ok") {
-
-                            var photosRef = data.photos.photo;
-                            var index = Math.floor((Math.random() * photosRef.length) + 0);
-                            var photoRef = photosRef[index];
-
-                            $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
-                            //console.log($scope.backGrounds);
-                        }
-                    }
-                    else {
-
-                        console.error("ERROR: unknown error: getting main background image ");
-                    }
-                });
-            })();//end of self-invoked function getBackgrounds
+            //(function getBackgrounds() {
+            //
+            //    mainService.getBackgrounds(function(err, data) {
+            //
+            //        if(err) {
+            //
+            //            console.error("ERROR: getting main background image");
+            //        }
+            //        else if(data) {
+            //
+            //            if(data.photos.photo.length === 0) {
+            //
+            //                console.warn("WARNING: no photo received");
+            //                $scope.backGrounds = "some default image";
+            //            }
+            //            else if(data.stat === "ok") {
+            //
+            //                var photosRef = data.photos.photo;
+            //                var index = Math.floor((Math.random() * photosRef.length) + 0);
+            //                var photoRef = photosRef[index];
+            //
+            //                $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
+            //                //console.log($scope.backGrounds);
+            //            }
+            //        }
+            //        else {
+            //
+            //            console.error("ERROR: unknown error: getting main background image ");
+            //        }
+            //    });
+            //})();//end of self-invoked function getBackgrounds
     }]);
 
 }());

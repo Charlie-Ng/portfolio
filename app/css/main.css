@@ -157,7 +157,16 @@ html, body {
 }
 
 @-webkit-keyframes main-name-fill {
+    10% {
+        opacity: 0.2;
+        fill: #dadada;
+    }
+    30% {
+        opacity: 0.4;
+        fill: #dadada;
+    }
     50% {
+        opacity: 0.8;
         fill: #dadada;
     }
     100% {
@@ -173,7 +182,16 @@ html, body {
 }
 
 @keyframes main-name-fill {
+    10% {
+        opacity: 0.2;
+        fill: #dadada;
+    }
+    30% {
+        opacity: 0.4;
+        fill: #dadada;
+    }
     50% {
+        opacity: 0.8;
         fill: #dadada;
     }
     100% {
