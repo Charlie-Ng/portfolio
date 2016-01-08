@@ -10,10 +10,6 @@
     padding: 0;
 }
 
-.resume-view .resume-slider-out-container {
-    overflow: scroll;
-}
-
 .resume-slider-container .resume-slider-text {
     box-sizing: border-box;
     padding: 0 4px 0 4px;
@@ -57,4 +53,8 @@
 
 .resume-footer {
     overflow: hidden;
+}
+
+.resume-textarea-label {
+    padding-left: 14px !important;
 }

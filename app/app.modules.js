@@ -24,8 +24,8 @@
                 .when('/Contact', {
                     templateUrl: 'templates/contact/contact.html'
                 })
-                .when('/Blog', {
-                    templateUrl: 'templates/blog/blog.html'
+                .when('/Favorites', {
+                    templateUrl: 'templates/favorites/favorites.html'
                 })
                 .when('/', {
                     templateUrl: 'templates/main/main.html'
