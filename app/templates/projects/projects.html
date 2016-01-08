@@ -2,7 +2,7 @@
     <p class="projects-quote">"A language that doesn't affect the way you think about programming, is not worth knowing." --Alan J. Perlis</p>
     <div ng-repeat="project in myProjects" class="projects-all-cards">
     <md-card>
-        <div layout="row" layout-sm="column" layout-md="column" layout-padding>
+        <div layout="row" layout-xs="column" layout-sm="column" layout-padding>
             <a ng-href="{{::project.url}}" target="_blank"><img class="projects-app-images" ng-src="{{project.img}}"></a>
             <md-card-content>
                 <h3>{{::project.name}}</h3>
