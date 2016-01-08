@@ -15,14 +15,11 @@
                 })
                 .when('/Projects', {
                     controller: 'resumeCtrl',
-                    templateUrl: 'templates/projects/projects.html' // FIXME: temporarily use app/components...
+                    templateUrl: 'templates/projects/projects.html'
                 })
                 .when('/Resume', {
                     controller: 'resumeCtrl',
                     templateUrl: 'templates/resume/resume.html'
-                })
-                .when('/Contact', {
-                    templateUrl: 'templates/contact/contact.html'
                 })
                 .when('/Favorites', {
                     templateUrl: 'templates/favorites/favorites.html'

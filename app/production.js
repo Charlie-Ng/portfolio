@@ -24,8 +24,8 @@
                 .when('/Contact', {
                     templateUrl: 'templates/contact/contact.html'
                 })
-                .when('/Blog', {
-                    templateUrl: 'templates/blog/blog.html'
+                .when('/Favorites', {
+                    templateUrl: 'templates/favorites/favorites.html'
                 })
                 .when('/', {
                     templateUrl: 'templates/main/main.html'
@@ -58,7 +58,7 @@
     angular.module('appControllers', []);
 
     angular.module('appControllers').controller('appCtrl',
-        ['$scope', '$mdSidenav','$window', 'mainService', '$timeout', function($scope, $mdSidenav, $window, mainService, $timeout) {
+        ['$scope', '$mdSidenav','$window', function($scope, $mdSidenav, $window) {
 
             /*
              * sidenav show/hide function
@@ -77,7 +77,7 @@
                 { name: "Projects", icon: "ic_library_books_white_48px.svg"},
                 { name: "Resume", icon: "ic_description_white_48px.svg"},
                 //{ name: "Contact", icon: "ic_contact_phone_white_48px.svg"},
-                { name: "Blog", icon: "ic_book_white_48px.svg"}
+                { name: "Favorites", icon: "ic_book_white_48px.svg"}
             ];
 
             /*
@@ -137,37 +137,45 @@
              */
             $scope.backGrounds = "";
 
-            (function getBackgrounds() {
+            function getBackgrounds() {
 
-                mainService.getBackgrounds(function(err, data) {
+                var bgName = "bg" + Math.floor((Math.random() * 5) + 1) + ".jpg";
+                $scope.backGrounds =  "content/images/" + bgName;
+            }
 
-                    if(err) {
+            getBackgrounds();
 
-                        console.error("ERROR: getting main background image");
-                    }
-                    else if(data) {
-
-                        if(data.photos.photo.length === 0) {
-
-                            console.warn("WARNING: no photo received");
-                            $scope.backGrounds = "some default image";
-                        }
-                        else if(data.stat === "ok") {
-
-                            var photosRef = data.photos.photo;
-                            var index = Math.floor((Math.random() * photosRef.length) + 0);
-                            var photoRef = photosRef[index];
-
-                            $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
-                            //console.log($scope.backGrounds);
-                        }
-                    }
-                    else {
-
-                        console.error("ERROR: unknown error: getting main background image ");
-                    }
-                });
-            })();//end of self-invoked function getBackgrounds
+            //(function getBackgrounds() {
+            //
+            //    mainService.getBackgrounds(function(err, data) {
+            //
+            //        if(err) {
+            //
+            //            console.error("ERROR: getting main background image");
+            //        }
+            //        else if(data) {
+            //
+            //            if(data.photos.photo.length === 0) {
+            //
+            //                console.warn("WARNING: no photo received");
+            //                $scope.backGrounds = "some default image";
+            //            }
+            //            else if(data.stat === "ok") {
+            //
+            //                var photosRef = data.photos.photo;
+            //                var index = Math.floor((Math.random() * photosRef.length) + 0);
+            //                var photoRef = photosRef[index];
+            //
+            //                $scope.backGrounds = "https://farm" + photoRef.farm + ".staticflickr.com/" + photoRef.server + "/" + photoRef.id + "_" + photoRef.originalsecret + "_o.jpg";
+            //                //console.log($scope.backGrounds);
+            //            }
+            //        }
+            //        else {
+            //
+            //            console.error("ERROR: unknown error: getting main background image ");
+            //        }
+            //    });
+            //})();//end of self-invoked function getBackgrounds
     }]);
 
 }());
@@ -285,10 +293,10 @@
                     major: "Computer Science, BS",
                     shortMajor: "CS, BS",
                     minor: "none",
-                    GPA: "3.41/4.0",
+                    GPA: "3.26/4.0",
                     graduateDate: "June 2016",
                     courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming",
-                        "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Abstract Mathematics", "Combinatorics"]
+                        "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Theory of Computation", "Algorithm Design and Analysis", "Abstract Mathematics", "Combinatorics", "Number Theory"]
                 },
                 
                 skills: {
@@ -298,7 +306,7 @@
                     java: {
 
                         name: "Java",
-                        rate: 8
+                        rate: 7
                     },
 
                     javascript: {

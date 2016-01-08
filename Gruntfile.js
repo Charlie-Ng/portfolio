@@ -37,7 +37,8 @@ module.exports = function(grunt){
                     'app/css/main.css',
                     'app/css/about.css',
                     'app/css/resume.css',
-                    'app/css/projects.css'
+                    'app/css/projects.css',
+                    'app/css/favorites.css'
                 ],
                 dest : 'app/production.css'
             }
