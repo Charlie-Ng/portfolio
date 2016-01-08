@@ -164,6 +164,7 @@ html, body {
     30% {
         opacity: 0.4;
         fill: #dadada;
+        stroke: black;
     }
     50% {
         opacity: 0.8;
@@ -185,6 +186,7 @@ html, body {
     10% {
         opacity: 0.2;
         fill: #dadada;
+        stroke: black;
     }
     30% {
         opacity: 0.4;
@@ -220,6 +222,9 @@ html, body {
         stroke-dashoffset: 0;
         opacity: 0.2;
     }
+    30% {
+        stroke: black;
+    }
     40% {
         stroke-dashoffset: 1200;
         opacity: 0.4;
@@ -245,6 +250,9 @@ html, body {
     20% {
         stroke-dashoffset: 0;
         opacity: 0.2;
+    }
+    30% {
+        stroke: black;
     }
     40% {
         stroke-dashoffset: 1200;
@@ -281,6 +289,9 @@ html, body {
 }
 
 @keyframes main-degree-animation {
+    30% {
+        stroke: black;
+    }
     50% {
         fill: #dadada;
     }
@@ -292,6 +303,9 @@ html, body {
 }
 
 @-webkit-keyframes main-degree-animation {
+    30% {
+        stroke: black;
+    }
     50% {
         fill: #dadada;
     }
