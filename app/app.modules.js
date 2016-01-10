@@ -22,6 +22,7 @@
                     templateUrl: 'templates/resume/resume.html'
                 })
                 .when('/Favorites', {
+                    controller: 'favoritesCtrl',
                     templateUrl: 'templates/favorites/favorites.html'
                 })
                 .when('/', {

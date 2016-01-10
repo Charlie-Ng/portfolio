@@ -1,16 +1,35 @@
 <div class="all-view favorites-view">
+
+    <p class="favorites-quote">-- collections of my favorite articles, books, videos, stories, and photos in science and technology --</p>
     <md-grid-list
             md-cols-xs="1"
             md-cols-sm="1"
-            md-cols-md="3"
-            md-cols-gt-md="4"
-            md-cols-gt-lg="5"
-            md-gutter="16px"
-            md-row-height="200px">
+            md-cols-md="2"
+            md-cols-gt-md="3"
+            md-cols-gt-lg="4"
+            md-gutter="20px"
+            md-row-height="230px">
 
-        <md-grid-tile>dsf<md-grid-tile-footer>sdfsdf</md-grid-tile-footer></md-grid-tile>
-        <md-grid-tile>dsf<md-grid-tile-footer>sdfsdf</md-grid-tile-footer></md-grid-tile>
-        <md-grid-tile>dsf<md-grid-tile-footer>sdfsdf</md-grid-tile-footer></md-grid-tile>
+        <!-- tile container -->
+        <md-grid-tile ng-repeat="favorite in favoritesCollection" class="md-whiteframe-5dp favorites-grid-tile" layout-padding>
+            <div class="favorites-tile-container" ng-click="showPreview(favorite)" layout="column">
+                <div class="favorites-tile-title">
+                    <b>{{::favorite.name}}</b>
+                </div>
+                <div class="favorites-tile-body">
+                    <img class="favorites-logo-img" ng-src={{favorite.imgUrl}} align="right"> {{::favorite.comment}}
+                </div>
+            </div>
+
+            <md-grid-tile-footer class="favorites-tile-footer" layout="row" layout-align="end center">
+                <div class="favorites-button-container">
+                    <md-button class="md-icon-button" ng-href="{{favorite.link}}" target="_blank"><md-icon target="_blank" aria-label="link" md-svg-src="content/icons/ic_link_black_48px.svg"></md-icon></md-button>
+                </div>
+                <div class="favorites-button-container">
+                   <md-button class="md-icon-button" ng-click="showPreview(favorite)"><md-icon aria-label="visibility" md-svg-src="content/icons/ic_visibility_black_48px.svg"></md-icon></md-button>
+                </div>
+            </md-grid-tile-footer>
+        </md-grid-tile>
 
     </md-grid-list>
 </div>

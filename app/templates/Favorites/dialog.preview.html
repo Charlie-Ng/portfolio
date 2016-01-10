@@ -1,0 +1,17 @@
+<md-dialog flex="80" aria-label="favorite preview">
+    <md-toolbar layout="row" layout-align="space-between center" class="favorites-dialog-preview-toolbar">
+        <p>{{::selectedFavorite.name}}</p>
+        <md-button class="md-icon-button" ng-click="cancel()"><md-icon aria-label="close" md-svg-src="content/icons/ic_close_white_48px.svg"></md-icon></md-button>
+    </md-toolbar>
+    <md-dialog-content layout-padding>
+        <p>{{::selectedFavorite.description}}</p>
+        <div ng-if="selectedFavorite.type === 'video'" class="favorites-dialog-content-container">
+            <iframe width="100%" height="315" ng-src="{{selectedFavorite.link}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div ng-if="selectedFavorite.type === 'book'" class="favorites-dialog-content-container">
+            <img ng-src={{selectedFavorite.imgUrl}} class="favorites-dialog-img">
+            <a ng-href={{selectedFavorite.link}} target="_blank"><p>get me the book!</p></a>
+        </div>
+    </md-dialog-content>
+
+</md-dialog>

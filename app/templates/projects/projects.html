@@ -4,7 +4,7 @@
     <md-card>
         <div layout="row" layout-xs="column" layout-sm="column" layout-padding>
             <a ng-href="{{::project.url}}" target="_blank"><img class="projects-app-images" ng-src="{{project.img}}"></a>
-            <md-card-content>
+            <md-card-content flex>
                 <h3>{{::project.name}}</h3>
                 <p>{{::project.projectDescription}}</p>
                 <md-button aria-label="link" ng-if="project.github.length" ng-href="{{::project.github}}" target="_blank"><img src="content/images/githublogo.png"></md-button>
