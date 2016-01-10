@@ -431,6 +431,22 @@
             $scope.favoritesCollection = [
 
                 {
+                    name: "Is Programming Hard to Learn?",
+                    author: "Code.org",
+                    description: "Code.org® is a non-profit dedicated to expanding participation in computer science by making it available in more " +
+                    "schools, and increasing participation by women and underrepresented students of color. Their vision is that every student in every " +
+                    "school should have the opportunity to learn computer science. We believe computer science and computer programming should be part " +
+                    "of the core curriculum in education, alongside other science, technology, engineering, and mathematics (STEM) courses, such as biology, " +
+                    "physics, chemistry and algebra.",
+                    comment: "Learning programming may be intimidating at first. " +
+                    "Listen to some of the great founders, Mark Zuckerberg, Bill Gates, Jack Dorsey, etc, to see their opinions on programming.",
+                    link: $sce.trustAsResourceUrl("https://www.youtube.com/embed/pvAsqPbz9Ro?html5=1"),
+                    imgUrl: "content/favorites/YouTubeSquareLogo.png",
+                    iconRef: "content/icons/ic_video_library_white_48px.svg",
+                    type: "video"
+                },
+
+                {
                     name: "Don't Make Me Think",
                     author: "Steve Krug",
                     description: "Since Don’t Make Me Think was first published in 2000, hundreds of thousands " +
@@ -445,13 +461,27 @@
                     type: "book"
                 },
 
+                {   name: "How to Make Stress Your Friends",
+                    author: "Kelly McGonigal",
+                    description: "Stress. It makes your heart pound, your breathing quicken and your forehead sweat. But while stress " +
+                    "has been made into a public health enemy, new research suggests that stress may only be bad for you if you believe " +
+                    "that to be the case. Psychologist Kelly McGonigal urges us to see stress as a positive, and introduces us to an unsung " +
+                    "mechanism for stress reduction: reaching out to others.",
+                    comment: "Stress makes you sweating, heart pounding, or anxious? What happens if you view them instead, " +
+                    "as signs that your body is energized, is preparing you to meet the challenge? You will be glad to have a new view of stress after watching this video.",
+                    link: $sce.trustAsResourceUrl("https://www.youtube.com/embed/RcGyVTAoXEU?html5=1"),
+                    imgUrl: "content/favorites/tedimg.gif",
+                    iconRef: "content/icons/ic_video_library_white_48px.svg",
+                    type: "video"
+                },
+
                 {
-                    name: "The mathematics of love",
+                    name: "The Mathematics of Love",
                     author: "Dr. Hannah Fry",
                     description: "Dr. Hannah Fry is a mathematician and complexity scientist from University College London's " +
                     "Centre for Advanced Spatial Analysis. Her work revolves around exploring the patterns in human behavior and " +
                     "applying a mathematical perspective to tackle a wide range of problems across our society.",
-                    comment: "Ever wonder how mathematics how can be related to love and to finding the perfect partner? You are gonna love the TED video by Dr. Hannah Fry.",
+                    comment: "Ever wonder how mathematics can be related to love and to finding the perfect partner? You are gonna love the TED video by Dr. Hannah Fry.",
                     link: $sce.trustAsResourceUrl("http://www.youtube.com/embed/N37x4GgDVBM?html5=1"),
                     imgUrl: "content/favorites/tedimg.gif",
                     iconRef: "content/icons/ic_video_library_white_48px.svg",

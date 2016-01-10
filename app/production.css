@@ -879,6 +879,13 @@ md-sidenav.md-closed.md-locked-open-add-active {
 /* favorites page css */
 .favorites-view {
     padding: 16px 16px 32px 16px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .favorites-view {
+        padding: 8px 8px 32px 8px;
+    }
 }
 
 .favorites-quote {
@@ -913,6 +920,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
 /* dialog css */
 .favorites-dialog-preview-toolbar {
     background-color: #5C6BC0 !important;
+    max-height: 64px;
 }
 
 .favorites-dialog-preview-toolbar > p {
