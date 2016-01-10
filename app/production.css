@@ -20,7 +20,7 @@ html, body {
 }
 
 .main-option-active {
-    background-color: rgba(158,158,158,0.2);;
+    background-color: rgba(158,158,158,0.2);
 }
 
 .main-sidenav {
@@ -875,4 +875,55 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .projects-quote {
     font-style: italic;
     text-align: center;
+}
+/* favorites page css */
+.favorites-view {
+    padding: 16px;
+}
+
+.favorites-quote {
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.favorites-grid-tile {
+    background-color: white;
+}
+
+.favorites-tile-container {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+.favorites-button-container {
+    float: right;
+}
+
+.favorites-logo-img {
+    width: 60px;
+    padding-left: 4px;
+}
+
+.favorites-tile-title {
+    padding: 0px 0px 8px 0px;
+}
+
+/* dialog css */
+.favorites-dialog-preview-toolbar {
+    background-color: #5C6BC0 !important;
+}
+
+.favorites-dialog-preview-toolbar > p {
+    margin: 20px;
+}
+
+.favorites-dialog-content-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.favorites-dialog-img {
+    width: 200px;
 }

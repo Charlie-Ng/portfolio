@@ -15,16 +15,14 @@
                 })
                 .when('/Projects', {
                     controller: 'resumeCtrl',
-                    templateUrl: 'templates/projects/projects.html' // FIXME: temporarily use app/components...
+                    templateUrl: 'templates/projects/projects.html'
                 })
                 .when('/Resume', {
                     controller: 'resumeCtrl',
                     templateUrl: 'templates/resume/resume.html'
                 })
-                .when('/Contact', {
-                    templateUrl: 'templates/contact/contact.html'
-                })
                 .when('/Favorites', {
+                    controller: 'favoritesCtrl',
                     templateUrl: 'templates/favorites/favorites.html'
                 })
                 .when('/', {
@@ -74,10 +72,9 @@
             $scope.menuOptions = [
 
                 { name: "About", icon: "ic_info_outline_white_48px.svg"},
+                { name: "Favorites", icon: "ic_bookmark_white_48px.svg"},
                 { name: "Projects", icon: "ic_library_books_white_48px.svg"},
-                { name: "Resume", icon: "ic_description_white_48px.svg"},
-                //{ name: "Contact", icon: "ic_contact_phone_white_48px.svg"},
-                { name: "Favorites", icon: "ic_book_white_48px.svg"}
+                { name: "Resume", icon: "ic_description_white_48px.svg"}
             ];
 
             /*
