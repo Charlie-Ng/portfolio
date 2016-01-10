@@ -27,7 +27,8 @@ module.exports = function(grunt){
                     'app/app.modules.js',
                     'app/app.controllers.js',
                     'app/services/mainService.js',
-                    'app/templates/resume/resumeCtrl.js'
+                    'app/templates/resume/resumeCtrl.js',
+                    'app/templates/favorites/favoritesCtrl.js'
 	        	],
 	        	dest : 'app/production.js'
         	},
