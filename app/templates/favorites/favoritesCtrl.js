@@ -59,7 +59,7 @@
                     controller: 'favoritesDialogCtrl',
                     templateUrl: 'templates/favorites/dialog.preview.html',
                     fullscreen: useFullScreen
-                })
+                });
             };
         }]);
 
@@ -70,6 +70,6 @@
             $scope.cancel = function() {
 
                 $mdDialog.cancel();
-            }
+            };
         }]);
 }());

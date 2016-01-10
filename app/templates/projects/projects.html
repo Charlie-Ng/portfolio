@@ -3,7 +3,7 @@
     <div ng-repeat="project in myProjects" class="projects-all-cards">
     <md-card>
         <div layout="row" layout-xs="column" layout-sm="column" layout-padding>
-            <a ng-href="{{::project.url}}" target="_blank"><img class="projects-app-images" ng-src="{{project.img}}"></a>
+            <a ng-href="{{::project.url}}" target="_blank"><img class="projects-app-images md-whiteframe-5dp" ng-src="{{project.img}}"></a>
             <md-card-content flex>
                 <h3>{{::project.name}}</h3>
                 <p>{{::project.projectDescription}}</p>

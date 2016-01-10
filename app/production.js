@@ -236,7 +236,7 @@
             $scope.myProjects = [
 
                 {
-                    name: "Aggie Feed",
+                    name: "UC Davis Aggie Feed",
                     projectDescription: "A Twitter-like campus activity stream that displays information and events submitted by approved campus departments and organizations.",
                     generalDescription: "Design and implement a Twitter-like app for UC Davis in a team of 5.",
                     languages: "Using AngularJS, Angular Material, NodeJS, and Protractor",
@@ -473,7 +473,7 @@
                     controller: 'favoritesDialogCtrl',
                     templateUrl: 'templates/favorites/dialog.preview.html',
                     fullscreen: useFullScreen
-                })
+                });
             };
         }]);
 
@@ -484,6 +484,6 @@
             $scope.cancel = function() {
 
                 $mdDialog.cancel();
-            }
+            };
         }]);
 }());
