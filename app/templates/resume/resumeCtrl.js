@@ -41,7 +41,7 @@
                     projectDescription: "A mobile-responsive web application that helps keep track of task with a login system.",
                     generalDescription: "Designed and implement a to-do-list like web app with a login system",
                     languages: "Using JavaScript, HTML/CSS, Bootstrap, and MeteorJS",
-                    url: "http://todocharlie.meteor.com",
+                    url: "https://todochar.herokuapp.com",
                     img: "content/images/todoWeb.png",
                     github: ""
                 }
@@ -71,9 +71,9 @@
                     major: "Computer Science, BS",
                     shortMajor: "CS, BS",
                     minor: "none",
-                    GPA: "3.26/4.0",
+                    GPA: "3.25/4.0",
                     graduateDate: "June 2016",
-                    courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming",
+                    courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming", "Computer Architecture", "Computer Networks",
                         "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Theory of Computation", "Algorithm Design and Analysis", "Abstract Mathematics", "Combinatorics", "Number Theory"]
                 },
                 
