@@ -56,7 +56,7 @@
     angular.module('appControllers', []);
 
     angular.module('appControllers').controller('appCtrl',
-        ['$scope', '$mdSidenav','$window', function($scope, $mdSidenav, $window) {
+        ['$scope', '$mdSidenav','$window', '$timeout', function($scope, $mdSidenav, $window, $timeout) {
 
             /*
              * sidenav show/hide function
@@ -137,7 +137,11 @@
             function getBackgrounds() {
 
                 var bgName = "bg" + Math.floor((Math.random() * 5) + 1) + ".jpg";
-                $scope.backGrounds =  "content/images/" + bgName;
+
+                $timeout(function() {
+
+                    $scope.backGrounds =  "content/images/" + bgName;
+                },300);
             }
 
             getBackgrounds();
@@ -251,7 +255,7 @@
                     generalDescription: "Design and implement my portfolio web app u",
                     languages: "Using AngularJS, Angular Material, ExpressJS",
                     url: "http://kitchiong.com",
-                    img: "content/images/portfiloWeb.png",
+                    img: "content/images/PortfiloWeb2.png",
                     github: "https://github.com/Charlie-Ng/portfolio"
                 },
 
@@ -281,7 +285,7 @@
                     email: "Please download PDF version to view"
                 },
                 
-                objective: "To obtain a full-time position as a full-stack developer/software engineer in the field of Computer Science.",
+                objective: "Prospective graduate with an excellent skill set in modern front-end technologies and a year of experience in web application development, seeking challenges in building application software.",
                 
                 education: {
                     
@@ -292,14 +296,15 @@
                     minor: "none",
                     GPA: "3.25/4.0",
                     graduateDate: "June 2016",
-                    courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming", "Computer Architecture", "Computer Networks",
+                    courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming", "Computer Architecture", "Computer Networks", "Computer Security",
                         "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Theory of Computation", "Algorithm Design and Analysis", "Abstract Mathematics", "Combinatorics", "Number Theory"]
                 },
                 
                 skills: {
 
-                    languages: ["Java", "JavaScript", "C", "C++", "HTML5/CSS3", "Git", "AngularJS", "Lunix"],
-                    webLang: ["JavaScript", "AngularJS", "HTML5/CSS3", "MongoDB"],
+                    languages: ["JavaScript", "Java", "C", "C++"],
+                    webLang: ["AngularJS", "Angular Material", "RESTful API", "MongoDB", "HTML5/CSS3", "NodeJS", "jQuery", "Mocha (unit testing)", "Protractor (e2e testing)", "Responsive Design"],
+                    familiar: ["Git", "Linux", "Bootstrap", "UX", "npm", "Bower", "Grunt", "Gulp"],
                     java: {
 
                         name: "Java",
@@ -358,18 +363,20 @@
                         period: "June 2015 - present",
                         oneLine: "Application Developer, UC Davis, June 2015 - present",
                         duties: {
-                            duty1: "・Work on a UC Davis app 'Aggiefeed', a Twitter-like campus activity stream. 'https://aggiefeed.ucdavis.edu'\n" +
-                            "・Technologies used: AngularJS, Angular Material, HTML5/CSS3, NodeJS, Jasmine, Grunt, etc."
+                            duty1: "・Created several interfaces and administrative features for UC Davis web app 'Aggiefeed', a Twitter-like campus activity stream. 'https://aggiefeed.ucdavis.edu'\n" +
+                            "・Written 4000+ lines of testing code using test frameworks: Mocha, Jasmine, and Protractor.\n" +
+                            "・Completed a client-side search box that integrates with MongoDB full-text search.\n" +
+                            "・Implemented server-side APIs, including GET, PUT, POST, DELETE with Restify and MongoDB."
                         }
                     },
 
                     job2 : {
 
-                        title: "Web Designer/Developer Intern",
+                        title: "Web Designer & Developer Intern",
                         company: "UC Davis",
                         period: "March 2015 - June 2015",
                         duties : {
-                            duty1: "・Redesigned, updated, and modified websites for Physical Education Department 'http://pe.ucdavis.edu/'"
+                            duty1: "・Redesigned, updated, and modified Physical Education Department website 'http://pe.ucdavis.edu/'"
                         }
                     },
 
@@ -380,7 +387,7 @@
                         period: "Sep 2013 - June 2014",
                         duties : {
 
-                            duty1: "・tutored students with different Math levels, from Algebra to Calculus."
+                            duty1: "・Tutored students with different Math levels, from Algebra to Calculus."
                         }
                     }
                 },
@@ -392,7 +399,7 @@
                 
                 awards: {
 
-                    award1: "・Student Excellence Scholarship, received at UC Davis (October, 2015)\n・Carolee Erickson Memorial ICC Scholarship (Student club scholarship), received at De Anza College. (March, 2014)"
+                    award1: "・Student Excellence Scholarship, received at UC Davis (October, 2015)\n・Inter Club Council Scholarship, received at De Anza College. (March, 2014)"
                 },
                 
                 links: {
@@ -459,6 +466,21 @@
                     imgUrl: "content/favorites/dontmakemethink.jpg",
                     iconRef: "content/icons/ic_bookmark_white_48px.svg",
                     type: "book"
+                },
+
+                {
+                    name: "What We're Learning From Online Education",
+                    author: "Daphne Koller",
+                    description: "Daphne Koller is enticing top universities to put their most intriguing courses online for free -- not just as a service, but as a way to research how people" +
+                    " learn. With Coursera (cofounded by Andrew Ng), each keystroke, quiz, peer-to-peer discussion and self-graded assignment builds an unprecedented pool of data on how knowledge is processed." +
+                    "With Coursera, Daphne Koller and co-founder Andrew Ng are bringing courses from top colleges online, free, for anyone who wants to take them",
+                    comment: "With a limited number of seats in a classroom, it's impossible for thousands of students to enroll, but with online lectures, it is truly possible. " +
+                    "Daphne Koller (Founder of Coursera) gave a great summary of the value of free online education.",
+                    link: $sce.trustAsResourceUrl("https://www.youtube.com/embed/U6FvJ6jMGHU?html5=1"),
+                    imgUrl: "content/favorites/tedimg.gif",
+                    iconRef: "content/icons/ic_video_library_white_48px.svg",
+                    type: "video"
+
                 },
 
                 {   name: "How to Make Stress Your Friends",

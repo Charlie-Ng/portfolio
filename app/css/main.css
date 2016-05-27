@@ -106,8 +106,8 @@ html, body {
 .all-view {
     margin: 4px;
     opacity: 0;
-    -webkit-animation: mainView 2s ease-in forwards;
-    animation: mainView 2s ease-in forwards;
+    -webkit-animation: mainView 3s ease-in forwards;
+    animation: mainView 3s ease-in forwards;
 }
 
 @-webkit-keyframes mainView {

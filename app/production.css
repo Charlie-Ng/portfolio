@@ -106,8 +106,8 @@ html, body {
 .all-view {
     margin: 4px;
     opacity: 0;
-    -webkit-animation: mainView 2s ease-in forwards;
-    animation: mainView 2s ease-in forwards;
+    -webkit-animation: mainView 3s ease-in forwards;
+    animation: mainView 3s ease-in forwards;
 }
 
 @-webkit-keyframes mainView {
@@ -837,7 +837,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
     padding-left: 14px !important;
 }
 .projects-app-images{
-    width: 300px;
+    width: 320px;
     height: 240px;
 }
 
@@ -898,7 +898,6 @@ md-sidenav.md-closed.md-locked-open-add-active {
 }
 
 .favorites-tile-container {
-    cursor: pointer;
     width: 100%;
     height: 100%;
     outline: none;

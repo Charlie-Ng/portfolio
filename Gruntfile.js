@@ -19,11 +19,6 @@ module.exports = function(grunt){
         concat : {
         	all : {
 	        	src : [
-             //       'app/bower_components/angular/angular.js',
-             //       'app/bower_components/angular-aria/angular-aria.js',
-             //       'app/bower_components/angular-animate/angular-animate.js,',
-             //       'app/bower_components/angular-material/angular-material.js',
-             //       'app/bower_components/angular-route/angular-route.js',
                     'app/app.modules.js',
                     'app/app.controllers.js',
                     'app/services/mainService.js',
@@ -34,7 +29,6 @@ module.exports = function(grunt){
         	},
             css : {
                 src : [
-                    //'app/bower_components/angular-material/angular-material.css',
                     'app/css/main.css',
                     'app/css/about.css',
                     'app/css/resume.css',

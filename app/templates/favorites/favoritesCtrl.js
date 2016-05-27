@@ -47,6 +47,21 @@
                     type: "book"
                 },
 
+                {
+                    name: "What We're Learning From Online Education",
+                    author: "Daphne Koller",
+                    description: "Daphne Koller is enticing top universities to put their most intriguing courses online for free -- not just as a service, but as a way to research how people" +
+                    " learn. With Coursera (cofounded by Andrew Ng), each keystroke, quiz, peer-to-peer discussion and self-graded assignment builds an unprecedented pool of data on how knowledge is processed." +
+                    "With Coursera, Daphne Koller and co-founder Andrew Ng are bringing courses from top colleges online, free, for anyone who wants to take them",
+                    comment: "With a limited number of seats in a classroom, it's impossible for thousands of students to enroll, but with online lectures, it is truly possible. " +
+                    "Daphne Koller (Founder of Coursera) gave a great summary of the value of free online education.",
+                    link: $sce.trustAsResourceUrl("https://www.youtube.com/embed/U6FvJ6jMGHU?html5=1"),
+                    imgUrl: "content/favorites/tedimg.gif",
+                    iconRef: "content/icons/ic_video_library_white_48px.svg",
+                    type: "video"
+
+                },
+
                 {   name: "How to Make Stress Your Friends",
                     author: "Kelly McGonigal",
                     description: "Stress. It makes your heart pound, your breathing quicken and your forehead sweat. But while stress " +

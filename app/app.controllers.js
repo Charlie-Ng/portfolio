@@ -8,7 +8,7 @@
     angular.module('appControllers', []);
 
     angular.module('appControllers').controller('appCtrl',
-        ['$scope', '$mdSidenav','$window', function($scope, $mdSidenav, $window) {
+        ['$scope', '$mdSidenav','$window', '$timeout', function($scope, $mdSidenav, $window, $timeout) {
 
             /*
              * sidenav show/hide function
@@ -89,7 +89,11 @@
             function getBackgrounds() {
 
                 var bgName = "bg" + Math.floor((Math.random() * 5) + 1) + ".jpg";
-                $scope.backGrounds =  "content/images/" + bgName;
+
+                $timeout(function() {
+
+                    $scope.backGrounds =  "content/images/" + bgName;
+                },300);
             }
 
             getBackgrounds();
