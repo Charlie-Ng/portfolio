@@ -76,7 +76,7 @@
 
                         <!-- Expected Graduate Date -->
                         <md-input-container flex>
-                            <label>Expected graduate date</label>
+                            <label>Graduation date</label>
                             <input ng-readonly="true" ng-model="myResume.education.graduateDate">
                         </md-input-container>
                     </div>
@@ -136,6 +136,18 @@
                         <md-slider ng-disabled="true" flex md-discrete ng-model="::myResume.skills.git.rate" min="0" max="10" step="1" aria-label="red" aria-label="rating"></md-slider>
                     </div>
                 </div>
+
+                <div layout="row" layout-sm="column" layout-xs="column" flex class="resume-slider-container">
+                    <div flex layout="row" layout-align="start center">
+                        <div class="md-body-1 resume-slider-text"><span>{{::myResume.skills.cs.name}}</span></div>
+                        <md-slider ng-disabled="true" flex md-discrete ng-model="::myResume.skills.cpp.rate" min="0" max="10" step="1" aria-label="red" aria-label="rating"></md-slider>
+                    </div>
+
+                    <div flex layout="row" layout-align="start center">
+                        <div class="md-body-1 resume-slider-text"><span>{{::myResume.skills.sql.name}}</span></div>
+                        <md-slider ng-disabled="true" flex md-discrete ng-model="::myResume.skills.git.rate" min="0" max="10" step="1" aria-label="red" aria-label="rating"></md-slider>
+                    </div>
+                </div>
             </md-content>
         </md-tab>
 
@@ -161,7 +173,7 @@
                     </div>
 
                     <md-input-container flex>
-                        <label>Accomplishments</label>
+                        <label>Duties</label>
                         <textarea ng-readonly="true" ng-model="myResume.experiences.job1.duties.duty1"></textarea>
                     </md-input-container>
                 </div>
@@ -225,9 +237,9 @@
         </md-tab>
 
     </md-tabs>
-    </md-content>
-    <md-divider></md-divider>
-    <md-content hide-xs layout="row" layout-align="end center" class="resume-footer">
-        <md-button href="https://drive.google.com/file/d/0B63QbBsBhL1KVDRqQms0a01JQnc/view?usp=sharing" target="_blank"><md-icon md-svg-src="content/icons/ic_get_app_black_48px.svg"></md-icon>PDF</md-button>
-    </md-content>
+    <!--</md-content>-->
+    <!--<md-divider></md-divider>-->
+    <!--<md-content hide-xs layout="row" layout-align="end center" class="resume-footer">-->
+        <!--<md-button href="https://drive.google.com/file/d/0B63QbBsBhL1KVDRqQms0a01JQnc/view?usp=sharing" target="_blank"><md-icon md-svg-src="content/icons/ic_get_app_black_48px.svg"></md-icon>PDF</md-button>-->
+    <!--</md-content>-->
 </md-content>

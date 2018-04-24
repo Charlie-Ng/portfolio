@@ -24,7 +24,7 @@ html, body {
 }
 
 .main-sidenav {
-    background-color: #283593;
+    background-color: #607D8B;
     overflow: hidden;
     -webkit-animation: sideNavEnter 1s ease-in 2s forwards;
     animation: sideNavEnter 1s ease-in-out 2s forwards;
@@ -64,7 +64,7 @@ html, body {
 }
 
 .main-sidenav md-list {
-    background-color:  #283593;
+    background-color:  #607D8B;
     padding: 0px;
 }
 
@@ -83,7 +83,7 @@ html, body {
 
 /* toolbar */
 .main-toolbar {
-    background-color: #5C6BC0 !important;
+    background-color: #B0BEC5 !important;
     color: black !important;
     width: 100%;
     /*-webkit-animation: toolBarEnter 4s ease 5s forwards;*/
@@ -125,13 +125,13 @@ html, body {
     background-color: #000000;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 @media screen and (max-width: 960px) {
 
     .main-view {
-        background-size: 100% 100%;
+        background-size: cover;
     }
 }
 
@@ -141,7 +141,7 @@ html, body {
     stroke: #ffffff;
     stroke-width: 1;
     stroke-dasharray: 1600;
-    font-size: 96px;
+    font-size: 72px;
     font-family: serif;
     text-anchor: middle;
     alignment-baseline: middle;

@@ -92,7 +92,8 @@
 
                 $timeout(function() {
 
-                    $scope.backGrounds =  "content/images/" + bgName;
+                    // $scope.backGrounds =  "content/images/" + bgName;
+                    $scope.backGrounds =  "content/images/bg6.jpg";
                 },300);
             }
 

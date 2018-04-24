@@ -17,6 +17,16 @@
             $scope.myProjects = [
 
                 {
+                    name: "CA DMV Chinese Written Test",
+                    projectDescription: "A web app to help people who want to take California DMV written test in either Traditional or Simplified Chinese.",
+                    generalDescription: "",
+                    languages: "Ionic 2, Angular",
+                    url: "http://chinesedmvca.com",
+                    img: "content/images/dmv-project.png",
+                    github: "https://github.com/Charlie-Ng/dmvTest"
+                },
+
+                {
                     name: "UC Davis Aggie Feed",
                     projectDescription: "A Twitter-like campus activity stream that displays information and events submitted by approved campus departments and organizations.",
                     generalDescription: "Design and implement a Twitter-like app for UC Davis in a team of 5.",
@@ -37,7 +47,7 @@
                 },
 
                 {
-                    name: "Task Management Web App",
+                    name: "Task Management Web App (deactivated)",
                     projectDescription: "A mobile-responsive web application that helps keep track of task with a login system.",
                     generalDescription: "Designed and implement a to-do-list like web app with a login system",
                     languages: "Using JavaScript, HTML/CSS, Bootstrap, and MeteorJS",
@@ -59,10 +69,10 @@
                     fullName: "Ng, Kit Chio",
                     nickName: "Charlie",
                     phone: "408-221-2865",
-                    email: "Please download PDF version to view"
+                    email: "N/A"
                 },
                 
-                objective: "Prospective graduate with an excellent skill set in modern front-end technologies and a year of experience in web application development, seeking challenges in building application software.",
+                objective: "Software Engineer with hands-on experience in full-stack web development, including front-end components, MVC architecture, RESTful API, database development, performance enhancement, and unit testing. Collaborative and accountable team player with abilities to work and solve problems independently. Seeking opportunities to work on small-to-large projects using modern technologies.",
                 
                 education: {
                     
@@ -71,7 +81,7 @@
                     major: "Computer Science, BS",
                     shortMajor: "CS, BS",
                     minor: "none",
-                    GPA: "3.25/4.0",
+                    GPA: "3.2/4.0",
                     graduateDate: "June 2016",
                     courses: ["Programming Languages", "Operating Systems", "Software Engineering", "Web Development", "Web Programming", "Computer Architecture", "Computer Networks", "Computer Security",
                         "Advanced Java", "Data Structure", "Assembly Languages", "C++ for C/Java Programmers", "Theory of Computation", "Algorithm Design and Analysis", "Abstract Mathematics", "Combinatorics", "Number Theory"]
@@ -128,17 +138,27 @@
 
                         name: "Lunix",
                         rate: 6
+                    },
+
+                    cs: {
+                       name: "C#",
+                        rate: 8
+                    },
+
+                    sql: {
+                        name: "SQL",
+                        rate: 7
                     }
                 },
                 
                 experiences: {
 
-                    job1 : {
+                    job2 : {
 
                         title: "Applications Developer",
                         company: "UC Davis",
-                        period: "June 2015 - present",
-                        oneLine: "Application Developer, UC Davis, June 2015 - present",
+                        period: "June 2015 - June 2016",
+                        oneLine: "Application Developer, UC Davis, June 2015 - June 2016",
                         duties: {
                             duty1: "・Created several interfaces and administrative features for UC Davis web app 'Aggiefeed', a Twitter-like campus activity stream. 'https://aggiefeed.ucdavis.edu'\n" +
                             "・Written 4000+ lines of testing code using test frameworks: Mocha, Jasmine, and Protractor.\n" +
@@ -147,14 +167,17 @@
                         }
                     },
 
-                    job2 : {
+                    job1 : {
 
-                        title: "Web Designer & Developer Intern",
-                        company: "UC Davis",
-                        period: "March 2015 - June 2015",
+                        title: "Software Engineer II",
+                        company: "Certent, Inc",
+                        period: "July 2016 - Present",
                         duties : {
-                            duty1: "・Redesigned, updated, and modified Physical Education Department website 'http://pe.ucdavis.edu/'"
-                        }
+                            duty1: "・Converting a 10-year legacy project to a UX design oriented one using AngualrJS, Bootstrap, .NET MVC, Oracle database, REST API.\n"+
+                            "・Implement extensive web pages and UI components in a timely manner to meet project goals.\n" +
+                            "・Hold knowledge transfer meetings for different teams to adapt to new stack.\n" +
+                            "・Fix hard bugs and dug deep into corner cases to improve software quality."
+        }
                     },
 
                     job3 : {
