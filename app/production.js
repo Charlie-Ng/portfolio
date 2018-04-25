@@ -471,7 +471,7 @@
                     "physics, chemistry and algebra.",
                     comment: "Learning programming may be intimidating at first. " +
                     "Listen to some of the great founders, Mark Zuckerberg, Bill Gates, Jack Dorsey, etc, to see their opinions on programming.",
-                    link: $sce.trustAsResourceUrl("https://www.youtube.com/embed/pvAsqPbz9Ro?html5=1"),
+                    link: $sce.trustAsResourceUrl("https://www.youtube.com/embed/IoPx_rSicrM?html5=1"),
                     imgUrl: "content/favorites/YouTubeSquareLogo.png",
                     iconRef: "content/icons/ic_video_library_white_48px.svg",
                     type: "video"
