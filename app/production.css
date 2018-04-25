@@ -775,6 +775,10 @@ md-sidenav.md-closed.md-locked-open-add-active {
     .about-paragraph-sm-view {
         font-size: 20px;
     }
+
+    .about-logos .md-button{
+        margin: 0;
+    }
 }
 .resume-view {
 }

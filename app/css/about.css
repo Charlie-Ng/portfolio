@@ -444,4 +444,8 @@
     .about-paragraph-sm-view {
         font-size: 20px;
     }
+
+    .about-logos .md-button{
+        margin: 0;
+    }
 }
